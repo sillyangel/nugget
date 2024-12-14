@@ -1,6 +1,6 @@
-package xyz.sillyangel.nuggetmod.item;
+package xyz.sillyangel.nugget.item;
 
-import xyz.sillyangel.nuggetmod.NuggetMod;
+import xyz.sillyangel.nugget.NuggetMod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

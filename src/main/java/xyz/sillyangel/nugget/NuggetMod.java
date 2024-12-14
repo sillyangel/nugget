@@ -1,4 +1,4 @@
-package xyz.sillyangel.nuggetmod;
+package xyz.sillyangel.nugget;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -15,11 +15,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import xyz.sillyangel.nuggetmod.item.ModItems;
+import xyz.sillyangel.nugget.item.ModItems;
 
 // Very important Comment
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(xyz.sillyangel.nuggetmod.NuggetMod.MOD_ID)
+@Mod(NuggetMod.MOD_ID)
 public class NuggetMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "nuggetmod";

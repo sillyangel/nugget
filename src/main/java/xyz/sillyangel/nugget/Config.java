@@ -1,4 +1,4 @@
-package xyz.sillyangel.nuggetmod;
+package xyz.sillyangel.nugget;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
