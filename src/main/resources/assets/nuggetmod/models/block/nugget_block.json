@@ -1,0 +1,6 @@
+{
+    "parent": "minecraf:block/cube_all",
+    "textures": {
+        "all": "nuggetmod:block/nugget_block"
+    }
+}

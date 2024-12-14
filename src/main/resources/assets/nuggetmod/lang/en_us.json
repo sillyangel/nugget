@@ -1,3 +1,5 @@
 {
-  "item.nuggetmod.nugget": "nugget"
+  "item.nuggetmod.nugget": "nugget",
+  "block.nuggetmod.nugget_block": "Nugget Block",
+  "block.nuggetmod.raw_nugget_block": "Raw Nugget Block"
 }
