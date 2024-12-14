@@ -1,7 +1,7 @@
 package xyz.sillyangel.nugget.block;
 
-import net.sillyangel.nugget.NuggetMod;
-import net.sillyangel.nugget.item.ModItems;
+import xyz.sillyangel.nugget.NuggetMod;
+import xyz.sillyangel.nugget.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -25,7 +25,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_NUGGET_BLOCK = registerBlock("raw_nugget_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
