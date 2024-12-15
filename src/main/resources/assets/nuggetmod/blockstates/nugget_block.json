@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "nuggetmod:nugget_block" }
+        "": { "model": "nuggetmod:block/nugget_block" }
     }
 }
