@@ -14,6 +14,9 @@ public class ModItems {
     public static final RegistryObject<Item> NUGGET = ITEMS.register("nugget",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RAW_NUGGET = ITEMS.register("raw_nugget",
+            () -> new Item(new Item.Properties()));
+
 
 
     public static void register(IEventBus eventBus) {

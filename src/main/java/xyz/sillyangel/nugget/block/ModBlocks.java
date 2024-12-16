@@ -2,9 +2,11 @@ package xyz.sillyangel.nugget.block;
 
 import xyz.sillyangel.nugget.NuggetMod;
 import xyz.sillyangel.nugget.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,8 +27,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_NUGGET_BLOCK = registerBlock("raw_nugget_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    // ores
+    public static final RegistryObject<Block> NUGGET_ORE = registerBlock("nugget_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()));
+    
+    public static final RegistryObject<Block> NUGGET_DEEPSLATE_ORE = registerBlock("nugget_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    
+            private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;

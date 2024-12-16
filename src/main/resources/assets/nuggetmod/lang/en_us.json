@@ -1,5 +1,12 @@
 {
+  "item.nuggetmod.raw_nugget": "Raw Nugget",
   "item.nuggetmod.nugget": "nugget",
+
   "block.nuggetmod.nugget_block": "Nugget Block",
-  "block.nuggetmod.raw_nugget_block": "Raw Nugget Block"
+  "block.nuggetmod.raw_nugget_block": "Raw Nugget Block",
+  "block.nuggetmod.nugget_ore": "Nugget Ore",
+  "block.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
+
+  "creativetab.nuggetmod.nugget_items": "Nugget Mod Items",
+  "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks"
 }

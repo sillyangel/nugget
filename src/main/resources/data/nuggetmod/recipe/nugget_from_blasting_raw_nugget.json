@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 0.50,
+    "ingredient": {
+        "item": "nuggetmod:raw_nugget"
+    },
+    "result": {
+        "id": "nuggetmod:nugget"
+    }
+}
