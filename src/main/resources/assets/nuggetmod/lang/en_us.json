@@ -8,5 +8,7 @@
   "block.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
 
   "creativetab.nuggetmod.nugget_items": "Nugget Mod Items",
-  "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks"
+  "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks",
+
+  "item.nuggetmod.nugget.tooltip": "THE NUGGET"
 }
