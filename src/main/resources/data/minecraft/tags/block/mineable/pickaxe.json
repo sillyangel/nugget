@@ -1,9 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "nuggetmod:nugget_block",
-        "nuggetmod:raw_nugget_block",
-        "nuggetmod:nugget_ore",
-        "nuggetmod:nugget_deepslate_ore"
-    ]
-}

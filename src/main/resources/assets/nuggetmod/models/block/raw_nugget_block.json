@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-        "all": "nuggetmod:block/raw_nugget_block"
-    }
-}
