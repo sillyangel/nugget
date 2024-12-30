@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "nugget",
+  "ingredient": {
+    "item": "nuggetmod:nugget_deepslate_ore"
+  },
+  "result": {
+    "id": "nuggetmod:nugget"
+  }
+}

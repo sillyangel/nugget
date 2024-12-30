@@ -1,0 +1,13 @@
+// 1.21	2024-12-30T14:50:30.7438816	Block States: nuggetmod
+e458b67af79198beb28149bb003b81fd70269977 assets/nuggetmod/blockstates/nugget_block.json
+878193901a69171263432147c8d69dc3ad6a3329 assets/nuggetmod/blockstates/nugget_deepslate_ore.json
+97b7f829a5952c457a7bd71a23fd2e40c9e41afd assets/nuggetmod/blockstates/nugget_ore.json
+fc3b3199be08abb9ba378b6500ae96db0336a2ac assets/nuggetmod/blockstates/raw_nugget_block.json
+5cd8b360f3c316bc790a0a08cca2902f5494ecb1 assets/nuggetmod/models/block/nugget_block.json
+04a6c3905fc9bebb1701de7bf870efea11648a0e assets/nuggetmod/models/block/nugget_deepslate_ore.json
+d8685b96ce2399042e685f5a0d52cc6f93aa2f7c assets/nuggetmod/models/block/nugget_ore.json
+22ddcb7a66f04ae207af491a5e9264556726fec1 assets/nuggetmod/models/block/raw_nugget_block.json
+87d953ce0211f8d1ae9e2f0411c38e6a937db408 assets/nuggetmod/models/item/nugget_block.json
+1cbd017c90351ede4f571a9e6efd9b78640fed67 assets/nuggetmod/models/item/nugget_deepslate_ore.json
+e8d9aff343954c5f248feb0b5fda5d9719aff29e assets/nuggetmod/models/item/nugget_ore.json
+54f4c1e65c7687038adaf302a6471a1591ec2c2e assets/nuggetmod/models/item/raw_nugget_block.json

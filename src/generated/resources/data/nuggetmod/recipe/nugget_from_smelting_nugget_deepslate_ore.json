@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "nugget",
+  "ingredient": {
+    "item": "nuggetmod:nugget_deepslate_ore"
+  },
+  "result": {
+    "id": "nuggetmod:nugget"
+  }
+}

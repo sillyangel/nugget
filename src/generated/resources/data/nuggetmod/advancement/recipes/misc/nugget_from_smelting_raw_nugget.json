@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nuggetmod:raw_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nuggetmod:nugget_from_smelting_raw_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nuggetmod:nugget_from_smelting_raw_nugget"
+    ]
+  }
+}

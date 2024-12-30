@@ -1,0 +1,4 @@
+// 1.21	2024-12-30T14:50:30.7520688	Tags for minecraft:block mod id nuggetmod
+265fffb09f55ddbd810e4aca08e95427b6f8abb8 data/minecraft/tags/block/mineable/pickaxe.json
+6b9f8ad5cb4e30e1a1e5fed561cbcdf19794cfba data/minecraft/tags/block/needs_diamond_tool.json
+532756f975f04ecee6d351a7d1086a9c9921d694 data/minecraft/tags/block/needs_iron_tool.json
