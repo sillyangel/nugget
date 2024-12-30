@@ -21,6 +21,12 @@ public class ModCreativeModeTabs {
                       output.accept(ModItems.NUGGET.get());
                       output.accept(ModItems.RAW_NUGGET.get());
 
+                        output.accept(ModItems.NUGGET_SWORD.get());
+                        output.accept(ModItems.NUGGET_PICKAXE.get());
+                        output.accept(ModItems.NUGGET_SHOVEL.get());
+                        output.accept(ModItems.NUGGET_AXE.get());
+                        output.accept(ModItems.NUGGET_HOE.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> NUGGET_BLOCKS_TAB = CREATIVE_MODE_TABS.register("nuggetmod_blocks_tab",
