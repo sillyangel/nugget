@@ -7,6 +7,7 @@ import xyz.sillyangel.nugget.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -121,6 +122,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A A")
                 .define('A', ModItems.NUGGET.get())
                 .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+
+        trimSmithing(pRecipeOutput, ModItems.NUGGET_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget"));
 
         oreSmelting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
         oreBlasting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");

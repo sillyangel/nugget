@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.*;
 import java.util.List;
@@ -55,8 +56,13 @@ public class ModItems {
     public static final RegistryObject<Item> NUGGET_BOOTS = ITEMS.register("nugget_boots",
             () -> new ArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(25))));
-
-
+    // horse armor
+    public static final RegistryObject<Item> NUGGET_HORSE_ARMOR = ITEMS.register("nugget_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+            false, new Item.Properties().stacksTo(1)));
+    // smithing temp
+    public static final RegistryObject<Item> NUGGET_SMITHING_TEMPLATE = ITEMS.register("nugget_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget")));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
