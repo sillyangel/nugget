@@ -1,3 +1,8 @@
-// 1.21	2024-12-30T14:50:30.7393544	Item Models: nuggetmod
+// 1.21	2024-12-30T18:01:57.8351251	Item Models: nuggetmod
 90b22d61432e35fb68e2232a3eb76e15d2a77d89 assets/nuggetmod/models/item/nugget.json
+cac221f8a7659366628c3b429c22ebd27f5adadd assets/nuggetmod/models/item/nugget_axe.json
+cc6e0d754901f7397916b947124acf6ba8467153 assets/nuggetmod/models/item/nugget_hoe.json
+1453d89f622ad5616505f248996b1715b196af76 assets/nuggetmod/models/item/nugget_pickaxe.json
+f67a964a8a74c61df4d090dc5b250ad03bb16d8f assets/nuggetmod/models/item/nugget_shovel.json
+dcc1dd8bb95c5c088212a9584d952a11ac2a840d assets/nuggetmod/models/item/nugget_sword.json
 762606d79e485c8a5e4447e8a1236bee89185245 assets/nuggetmod/models/item/raw_nugget.json

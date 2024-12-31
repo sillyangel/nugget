@@ -7,6 +7,12 @@
   "block.nuggetmod.nugget_ore": "Nugget Ore",
   "block.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
 
+  "item.nuggetmod.nugget_sword": "Nugget Sword",
+  "item.nuggetmod.nugget_pickaxe": "Nugget Pickaxe",
+  "item.nuggetmod.nugget_shovel": "Nugget Shovel",
+  "item.nuggetmod.nugget_axe": "Nugget Axe",
+  "item.nuggetmod.nugget_hoe": "Nugget Hoe",
+
   "creativetab.nuggetmod.nugget_items": "Nugget Mod Items",
   "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks",
 

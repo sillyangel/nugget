@@ -1,5 +1,6 @@
 package xyz.sillyangel.nugget.datagen;
 
+import net.minecraft.world.item.Items;
 import xyz.sillyangel.nugget.NuggetMod;
 import xyz.sillyangel.nugget.block.ModBlocks;
 import xyz.sillyangel.nugget.item.ModItems;
@@ -46,7 +47,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_NUGGET.get(), 9)
                 .requires(ModBlocks.RAW_NUGGET_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_NUGGET_BLOCK.get()), has(ModBlocks.RAW_NUGGET_BLOCK.get())).save(pRecipeOutput);
+        // TOOLS
 
+        //SWORD
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.NUGGET_SWORD.get())
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .define('A', ModItems.NUGGET.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //PICAXE
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NUGGET_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.NUGGET.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //AXE
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NUGGET_AXE.get())
+                .pattern(" AA")
+                .pattern(" BA")
+                .pattern(" B ")
+                .define('A', ModItems.NUGGET.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //SHOVEL
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NUGGET_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.NUGGET.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //HOE
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NUGGET_HOE.get())
+                .pattern(" AA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.NUGGET.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+
+        // END OF TOOLS
 
         oreSmelting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
         oreBlasting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");
