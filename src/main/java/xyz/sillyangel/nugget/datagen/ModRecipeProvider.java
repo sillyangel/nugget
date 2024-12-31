@@ -92,6 +92,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // END OF TOOLS
 
+        // start of armor
+        // head!?!
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.NUGGET_HELMET.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("   ")
+                .define('A', ModItems.NUGGET.get())
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //shirt
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.NUGGET_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.NUGGET.get())
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //pants?
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.NUGGET_LEGGINGS.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.NUGGET.get())
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+        //socks
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.NUGGET_BOOTS.get())
+                .pattern("   ")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.NUGGET.get())
+                .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
+
         oreSmelting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
         oreBlasting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");
 

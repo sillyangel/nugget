@@ -93,7 +93,6 @@ public class ModItemModelProvider extends ItemModelProvider {
             });
         }
     }
-
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
