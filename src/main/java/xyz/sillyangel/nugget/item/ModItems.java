@@ -41,6 +41,22 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.NUGGET, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.NUGGET, 0, -3.0f))));
 
+    // armor things
+
+    public static final RegistryObject<Item> NUGGET_HELMET = ITEMS.register("nugget_helmet",
+            () -> new ArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(25))));
+    public static final RegistryObject<Item> NUGGET_CHESTPLATE = ITEMS.register("nugget_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(25))));
+    public static final RegistryObject<Item> NUGGET_LEGGINGS = ITEMS.register("nugget_leggings",
+            () -> new ArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(25))));
+    public static final RegistryObject<Item> NUGGET_BOOTS = ITEMS.register("nugget_boots",
+            () -> new ArmorItem(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(25))));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

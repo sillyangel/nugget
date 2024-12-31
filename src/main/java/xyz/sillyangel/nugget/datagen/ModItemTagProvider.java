@@ -4,6 +4,7 @@ import xyz.sillyangel.nugget.NuggetMod;
 import xyz.sillyangel.nugget.item.ModItems;
 import xyz.sillyangel.nugget.util.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
@@ -27,5 +28,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COAL)
                 .add(Items.STICK)
                 .add(Items.COMPASS);
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.NUGGET_HELMET.get())
+                .add(ModItems.NUGGET_CHESTPLATE.get())
+                .add(ModItems.NUGGET_LEGGINGS.get())
+                .add(ModItems.NUGGET_BOOTS.get());
     }
 }
