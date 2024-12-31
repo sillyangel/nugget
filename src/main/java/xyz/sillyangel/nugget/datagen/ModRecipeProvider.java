@@ -123,7 +123,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.NUGGET.get())
                 .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get())).save(pRecipeOutput);
 
-        trimSmithing(pRecipeOutput, ModItems.NUGGET_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget"));
+        trimSmithing(pRecipeOutput, ModItems.NUGGET_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_trim_mat"));
 
         oreSmelting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
         oreBlasting(pRecipeOutput, NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");

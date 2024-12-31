@@ -1,0 +1,8 @@
+{
+  "asset_id": "nuggetmod:nugget",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.nuggetmod.nugget"
+  },
+  "template_item": "nuggetmod:nugget_armor_trim_smithing_template"
+}

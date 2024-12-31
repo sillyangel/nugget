@@ -62,7 +62,7 @@ public class ModItems {
             false, new Item.Properties().stacksTo(1)));
     // smithing temp
     public static final RegistryObject<Item> NUGGET_SMITHING_TEMPLATE = ITEMS.register("nugget_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget")));
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_trim_mat")));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

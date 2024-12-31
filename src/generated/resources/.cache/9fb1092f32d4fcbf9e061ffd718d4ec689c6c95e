@@ -1,4 +1,4 @@
-// 1.21	2024-12-30T23:21:37.408016481	Recipes
+// 1.21	2024-12-31T12:23:21.3783193	Recipes
 1c4efbad060c0d91ce6e6c1cb6d1d1669bbcc6b4 data/nuggetmod/advancement/recipes/combat/nugget_boots.json
 588a665982f97f016a8945b507f6a03d310f4090 data/nuggetmod/advancement/recipes/combat/nugget_chestplate.json
 63d4a98bae280da5308f5011f4dce19970e727f9 data/nuggetmod/advancement/recipes/combat/nugget_helmet.json
@@ -12,6 +12,7 @@ e10188670de3a7a815f73a66fc5f4e92a648b51e data/nuggetmod/advancement/recipes/misc
 16fc56222bdb61afa3618038ee189f405fd20922 data/nuggetmod/advancement/recipes/misc/nugget_from_smelting_nugget_deepslate_ore.json
 7b9dcb92c1af9c1982292c1efd6b4fb27513b3f5 data/nuggetmod/advancement/recipes/misc/nugget_from_smelting_nugget_ore.json
 762af010e4f2c6dbf4b54f5f7c4575f28b47c524 data/nuggetmod/advancement/recipes/misc/nugget_from_smelting_raw_nugget.json
+3a29497bf8969610a531ac0779bb7267c1bf640d data/nuggetmod/advancement/recipes/misc/nugget_trim_mat.json
 59e41b4b30c51f225ccb673f401839ec7e77fe20 data/nuggetmod/advancement/recipes/misc/raw_nugget.json
 0eac4876a225ba434ebefcecb2d9a3d5b1af5cc3 data/nuggetmod/advancement/recipes/misc/raw_nugget_block.json
 a159ddd57f6c263d4862f5ee479f3df3595379d9 data/nuggetmod/advancement/recipes/tools/nugget_axe.json
@@ -35,5 +36,6 @@ b7053163e6e237928a9de0b5dfe921883a6e6b5c data/nuggetmod/recipe/nugget_from_smelt
 b983b6efee4952a3a2dee230c8f13b363894d29e data/nuggetmod/recipe/nugget_pickaxe.json
 2c25036d787f791caa37836de3c04b31ab9e9551 data/nuggetmod/recipe/nugget_shovel.json
 af124114b7882426d847851db6f2f1c8bba4e6eb data/nuggetmod/recipe/nugget_sword.json
+89b44ca1e8e6540d7c1f61341e16258fcffeed6c data/nuggetmod/recipe/nugget_trim_mat.json
 c30c2ad83bc1c296f619a1d111eb11aff1155f0b data/nuggetmod/recipe/raw_nugget.json
 0a4297bae4d63ee5ba5092d4000e888112186293 data/nuggetmod/recipe/raw_nugget_block.json

@@ -42,6 +42,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.NUGGET_HORSE_ARMOR.get());
+        basicItem(ModItems.NUGGET_SMITHING_TEMPLATE.get());
         basicItem(ModItems.NUGGET.get());
         basicItem(ModItems.RAW_NUGGET.get());
 

@@ -1,5 +1,6 @@
-// 1.21	2024-12-30T23:10:58.869266025	Item Models: nuggetmod
+// 1.21	2024-12-31T12:23:21.3602938	Item Models: nuggetmod
 90b22d61432e35fb68e2232a3eb76e15d2a77d89 assets/nuggetmod/models/item/nugget.json
+b8f9c1135f1af8d77201d51866966ba73f3dbbfc assets/nuggetmod/models/item/nugget_armor_trim_smithing_template.json
 cac221f8a7659366628c3b429c22ebd27f5adadd assets/nuggetmod/models/item/nugget_axe.json
 dbadf09a9e221788b2cef71600701e4400e7a5ac assets/nuggetmod/models/item/nugget_boots.json
 7dca863c633a328b682607342061c24fa359317c assets/nuggetmod/models/item/nugget_boots_amethyst_trim.json
@@ -35,6 +36,7 @@ f9e9efc27bcaad6628e0f2bd73bfdb41ed8490d3 assets/nuggetmod/models/item/nugget_hel
 82fc614cc45ec6d645b943a390d630102f332a59 assets/nuggetmod/models/item/nugget_helmet_quartz_trim.json
 62a7de8cca1d782c0f8071f66fe9adc90d637228 assets/nuggetmod/models/item/nugget_helmet_redstone_trim.json
 cc6e0d754901f7397916b947124acf6ba8467153 assets/nuggetmod/models/item/nugget_hoe.json
+585ab18ac9b18eff5dd487a2c30c3448915dd5cb assets/nuggetmod/models/item/nugget_horse_armor.json
 33af7bddeab67677dc62cd5e92d5b8973b24106b assets/nuggetmod/models/item/nugget_leggings.json
 3e5b37dd9163b929d93012d11d2ef7ec968606da assets/nuggetmod/models/item/nugget_leggings_amethyst_trim.json
 3a0993a40e57bfed0b2bd9818ea191b8a779b30b assets/nuggetmod/models/item/nugget_leggings_copper_trim.json

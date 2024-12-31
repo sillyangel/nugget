@@ -1,0 +1,9 @@
+{
+  "asset_name": "nugget",
+  "description": {
+    "color": "#F9B042",
+    "translate": "trim_material.nuggetmod.nugget"
+  },
+  "ingredient": "nuggetmod:nugget",
+  "item_model_index": 0.1
+}
