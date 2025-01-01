@@ -24,6 +24,6 @@
 
   "item.nuggetmod.nugget.tooltip": "THE NUGGET",
   
-  "trim_pattern.nuggetmod.nugget": "Nugget Armor Trim",
+  "trim_pattern.nuggetmod.nugget_armor_trim_smithing_template": "Nugget Armor Trim",
   "trim_material.nuggetmod.nugget": "Nugget Material"
 }
