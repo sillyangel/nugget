@@ -1,12 +1,8 @@
-name: Build and Upload JAR
+name: Nightly Builds
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  schedule:
+    - cron: '0 0 * * *' # Runs at midnight UTC every day
 
 jobs:
   build:
@@ -28,8 +24,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Rename build artifact
+        run: mv build/libs/*.jar build/libs/nuggetmod-nightly.jar
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4.5.0
         with:
-          name: build-jar-mod
-          path: build/libs/*.jar
+          name: nuggetmod-nightly
+          path: build/libs/nuggetmod-nightly.jar
