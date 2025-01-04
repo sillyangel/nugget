@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.NUGGET_SMITHING_TEMPLATE.get());
         basicItem(ModItems.NUGGET.get());
         basicItem(ModItems.RAW_NUGGET.get());
+        basicItem(ModItems.NUGGET_MUSIC_DISC.get());
 
         handheldItem(ModItems.NUGGET_SWORD);
         handheldItem(ModItems.NUGGET_PICKAXE);

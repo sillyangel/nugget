@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 import xyz.sillyangel.nugget.item.ModCreativeModeTabs;
 import xyz.sillyangel.nugget.item.ModItems;
 import xyz.sillyangel.nugget.block.ModBlocks;
+import xyz.sillyangel.nugget.sound.ModSounds;
 
 // Very important Comment
 // The value here should match an entry in the META-INF/mods.toml file
@@ -37,6 +38,8 @@ public class NuggetMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

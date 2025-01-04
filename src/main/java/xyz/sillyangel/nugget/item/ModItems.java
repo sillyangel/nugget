@@ -8,6 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.*;
+import xyz.sillyangel.nugget.sound.ModSounds;
+
 import java.util.List;
 
 public class ModItems {
@@ -63,6 +65,11 @@ public class ModItems {
     // smithing temp
     public static final RegistryObject<Item> NUGGET_SMITHING_TEMPLATE = ITEMS.register("nugget_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_trim_mat")));
+
+    public static final RegistryObject<Item> NUGGET_MUSIC_DISC = ITEMS.register("nugget_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.NUGGET_THEME_KEY).stacksTo(1)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

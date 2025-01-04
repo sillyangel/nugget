@@ -12,6 +12,11 @@
   "item.nuggetmod.nugget_shovel": "Nugget Shovel",
   "item.nuggetmod.nugget_axe": "Nugget Axe",
   "item.nuggetmod.nugget_hoe": "Nugget Hoe",
+
+  "item.nuggetmod.nugget_music_disc": "Nugget Theme",
+  "item.nuggetmod.nugget_music_disc.desc": "Gegagedigedagedago",
+
+
   "item.nuggetmod.nugget_horse_armor": "Nugget Horse Armor",
 
   "item.nuggetmod.nugget_helmet": "Nugget Helmet",
@@ -23,7 +28,13 @@
   "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks",
 
   "item.nuggetmod.nugget.tooltip": "THE NUGGET",
+
+  "item.nuggetmod.nugget_armor_trim_smithing_template": "Nugget Armor Trim",
   
-  "trim_pattern.nuggetmod.nugget_armor_trim_smithing_template": "Nugget Armor Trim",
-  "trim_material.nuggetmod.nugget": "Nugget Material"
+  "trim_material.nuggetmod.nugget": "Nugget Material",
+  "trim_pattern.nuggetmod.nugget_trim_material": "Nugget Trim",
+
+
+  "painting.nuggetmod.nugget_painting.title": "Nugget Painting",
+  "painting.nuggetmod.nugget_painting.author": "Nugget Mod"
 }
