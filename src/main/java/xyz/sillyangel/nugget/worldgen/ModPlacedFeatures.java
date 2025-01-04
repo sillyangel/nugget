@@ -1,5 +1,7 @@
 package xyz.sillyangel.nugget.worldgen;
 
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import xyz.sillyangel.nugget.NuggetMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -14,10 +16,15 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
+    public static final ResourceKey<PlacedFeature> NUGGET_ORE_PLACED_KEY = registerKey("nugget_ore_placed");
+
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-
+        register(context, NUGGET_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_NUGGET_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

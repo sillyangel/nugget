@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_NUGGET_ORE = registerKey("nugget_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_NUGGET_ORE_KEY = registerKey("nugget_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -29,7 +29,7 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceables, ModBlocks.NUGGET_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.NUGGET_DEEPSLATE_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_NUGGET_ORE, Feature.ORE, new OreConfiguration(overworldNuggetOres, 9));
+        register(context, OVERWORLD_NUGGET_ORE_KEY, Feature.ORE, new OreConfiguration(overworldNuggetOres, 9));
 
     }
 
