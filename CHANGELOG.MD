@@ -1,6 +1,25 @@
 # Changelog
 
 
+## 1.1.1
+- Horse Armor
+- Player Armor
+    - Now able to enchant the armor
+- Custom Armor Trim and Material
+- Music Disc
+- Tool Set
+- Nugget is Eatable
+- Custom Painting
+- Ore Gen
+
+# Modrinth changle
+
+- Horse Armor
+- Player Armor
+- Music Disc
+- Ore Gen
+- Custom Painting
+
 ## 1.10
 - added tools, and sword
 - datagen for no more json files*
