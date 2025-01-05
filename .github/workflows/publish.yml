@@ -40,5 +40,6 @@ jobs:
           loaders: |-
             forge
           game-versions: |-
-            1.21.x
-          files: build/libs/*.jar
+            1.21.0
+            1.21.1
+          files: build/libs/nuggetmod-${{ github.event.release.tag_name )}.jar
