@@ -2,7 +2,9 @@ name: Build and Upload JAR
 
 on:
   release:
-    types: [published]
+    types:
+      - published
+      - edited
 
 jobs:
   build:
