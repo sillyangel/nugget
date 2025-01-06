@@ -64,7 +64,7 @@ public class ModItems {
             false, new Item.Properties().stacksTo(1)));
     // smithing temp
     public static final RegistryObject<Item> NUGGET_SMITHING_TEMPLATE = ITEMS.register("nugget_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_trim_mat")));
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_armor_trim_smithing_template")));
 
     public static final RegistryObject<Item> NUGGET_MUSIC_DISC = ITEMS.register("nugget_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.NUGGET_THEME_KEY).stacksTo(1)));
