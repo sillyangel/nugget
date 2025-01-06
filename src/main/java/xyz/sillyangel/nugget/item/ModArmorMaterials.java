@@ -17,6 +17,6 @@ public class ModArmorMaterials {
                 attribute.put(ArmorType.CHESTPLATE, 9);
                 attribute.put(ArmorType.HELMET, 5);
                 attribute.put(ArmorType.BODY, 11);
-            }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE,
             4f, 0.1f, ModTags.Items.NUGGET_REPAIRS, ResourceLocation.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget"));
 }
