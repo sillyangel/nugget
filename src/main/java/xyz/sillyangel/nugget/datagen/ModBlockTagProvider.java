@@ -31,7 +31,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_NUGGET_BLOCK.get())
                 .add(ModBlocks.NUGGET_BLOCK.get());
 
-        // tag(BlockTags.NEEDS_STONE_TOOL)
         tag(ModTags.Blocks.NEEDS_NUGGET_TOOL)
                 .add(ModBlocks.RAW_NUGGET_BLOCK.get())
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
