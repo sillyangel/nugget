@@ -28,7 +28,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.NUGGET_DEEPSLATE_ORE.get())
-                .add(ModBlocks.RAW_NUGGET_BLOCK.get());
+                .add(ModBlocks.RAW_NUGGET_BLOCK.get())
+                .add(ModBlocks.NUGGET_BLOCK.get());
 
         // tag(BlockTags.NEEDS_STONE_TOOL)
         tag(ModTags.Blocks.NEEDS_NUGGET_TOOL)
