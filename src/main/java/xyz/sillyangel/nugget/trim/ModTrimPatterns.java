@@ -1,5 +1,6 @@
 package xyz.sillyangel.nugget.trim;
 
+import net.minecraft.world.item.equipment.trim.TrimPattern;
 import xyz.sillyangel.nugget.NuggetMod;
 import xyz.sillyangel.nugget.item.ModItems;
 import net.minecraft.Util;
@@ -9,7 +10,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.armortrim.TrimPattern;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModTrimPatterns {

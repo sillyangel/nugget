@@ -1,11 +1,11 @@
 {
   "item.nuggetmod.raw_nugget": "Raw Nugget",
-  "item.nuggetmod.nugget": "nugget",
+  "item.nuggetmod.nugget": "Nugget",
 
-  "block.nuggetmod.nugget_block": "Nugget Block",
-  "block.nuggetmod.raw_nugget_block": "Raw Nugget Block",
-  "block.nuggetmod.nugget_ore": "Nugget Ore",
-  "block.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
+  "item.nuggetmod.nugget_block": "Nugget Block",
+  "item.nuggetmod.raw_nugget_block": "Raw Nugget Block",
+  "item.nuggetmod.nugget_ore": "Nugget Ore",
+  "item.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
 
   "item.nuggetmod.nugget_sword": "Nugget Sword",
   "item.nuggetmod.nugget_pickaxe": "Nugget Pickaxe",
@@ -18,21 +18,21 @@
 
 
   "item.nuggetmod.nugget_horse_armor": "Nugget Horse Armor",
+  "item.nuggetmod.nugget_armor_trim_smithing_template": "Nugget Trim Template",
 
   "item.nuggetmod.nugget_helmet": "Nugget Helmet",
   "item.nuggetmod.nugget_chestplate": "Nugget Chestplate",
   "item.nuggetmod.nugget_leggings": "Nugget Leggings",
   "item.nuggetmod.nugget_boots": "Nugget Boots",
 
-  "creativetab.nuggetmod.nugget_items": "Nugget Mod Items",
-  "creativetab.nuggetmod.nugget_blocks": "Nugget Mod Blocks",
+  "creativetab.nuggetmod.nugget_items": "Nugget Items",
+  "creativetab.nuggetmod.nugget_blocks": "Nugget Blocks",
 
   "item.nuggetmod.nugget.tooltip": "THE NUGGET",
 
-  "item.nuggetmod.nugget_armor_trim_smithing_template": "Nugget Armor Trim",
-  
   "trim_material.nuggetmod.nugget": "Nugget Material",
   "trim_pattern.nuggetmod.nugget_trim_material": "Nugget Trim",
+  "trim_pattern.nuggetmod.nugget": "Nugget Trim",
 
 
   "painting.nuggetmod.nugget_painting.title": "Nugget Painting",

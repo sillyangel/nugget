@@ -1,5 +1,6 @@
-// 1.21	2024-12-31T12:23:21.3743193	Tags for minecraft:item mod id nuggetmod
+// 1.21.3	2025-01-05T20:56:27.110625	Tags for minecraft:item mod id nuggetmod
 4dd3e16112d5950861571bb8b5212983e5192dfc data/minecraft/tags/item/trimmable_armor.json
 bb7be5aa0b582860d2d8dd7a0f2115ac4dc842a9 data/minecraft/tags/item/trim_materials.json
 ab6bd31a8063a99913c4a6fc41bde37ff0564389 data/minecraft/tags/item/trim_templates.json
+bb7be5aa0b582860d2d8dd7a0f2115ac4dc842a9 data/nuggetmod/tags/item/nugget_repairs.json
 562be55fb606ffa455100bd2a6942846dcd124cb data/nuggetmod/tags/item/transformable_items.json

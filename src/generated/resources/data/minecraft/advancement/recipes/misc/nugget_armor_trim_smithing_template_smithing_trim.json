@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nuggetmod:nugget_trim_mat"
+        "recipe": "minecraft:nugget_armor_trim_smithing_template_smithing_trim"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nuggetmod:nugget_trim_mat"
+      "minecraft:nugget_armor_trim_smithing_template_smithing_trim"
     ]
   }
 }

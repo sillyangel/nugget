@@ -38,5 +38,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NUGGET.get());
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.NUGGET_SMITHING_TEMPLATE.get());
+        tag(ModTags.Items.NUGGET_REPAIRS)
+                .add(ModItems.NUGGET.get());
     }
 }

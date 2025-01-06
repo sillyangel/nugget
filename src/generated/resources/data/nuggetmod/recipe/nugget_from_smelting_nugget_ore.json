@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.25,
   "group": "nugget",
-  "ingredient": {
-    "item": "nuggetmod:nugget_ore"
-  },
+  "ingredient": "nuggetmod:nugget_ore",
   "result": {
     "id": "nuggetmod:nugget"
   }
