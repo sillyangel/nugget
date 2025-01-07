@@ -178,6 +178,9 @@ tasks.named('jar', Jar).configure {
             'Implementation-Vendor'   : mod_authors
         ])
     }
+    archiveBaseName.set(mod_id) // Base name: mod ID
+    archiveVersion.set("${mod_version}-${minecraft_version}") // Version and Minecraft version
+    archiveClassifier.set('') // No additional classifier
 }
 
 // Example configuration to allow publishing using the maven-publish plugin
