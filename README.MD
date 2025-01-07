@@ -6,7 +6,7 @@ Nugget Mod is a Minecraft mod that adds "gegagedigedagedago" to the game, the Nu
 
 ## Installation
 
-- get the latest version of the mod from the releases page
-- download and install [Minecraft Forge](https://files.minecraftforge.net/)
-- copy the mod jar file to the `mods` folder in your Minecraft directory
-- launch Minecraft with the Forge profile
+- Get the latest version of the mod from the releases page.  
+- Download and install [NeoForge](https://neoforged.net/).  
+- Copy the mod JAR file to the `mods` folder in your Minecraft directory.  
+- Launch Minecraft with the NeoForge profile.  
