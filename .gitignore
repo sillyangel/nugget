@@ -34,3 +34,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# other minecraft mod files
+/build/
+/bin/
+/gradle/
+/.vscode/
+/.idea/
+/.gradle/
+/.eclipse/
+/run/
+/run-data/
+*.ps1
+*.launch
