@@ -1,4 +1,4 @@
-package dev.sillyangel.nuggetmod.fabric.world;
+package dev.sillyangel.nuggetmod.worldgen;
 
 import net.minecraft.world.gen.placementmodifier.*;
 

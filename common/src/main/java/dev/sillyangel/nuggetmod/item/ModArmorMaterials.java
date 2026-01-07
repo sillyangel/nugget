@@ -1,7 +1,7 @@
-package dev.sillyangel.nuggetmod.fabric.item;
+package dev.sillyangel.nuggetmod.item;
 
-import dev.sillyangel.nuggetmod.fabric.NuggetMod;
-import dev.sillyangel.nuggetmod.fabric.util.ModTags;
+import dev.sillyangel.nuggetmod.NuggetMod;
+import dev.sillyangel.nuggetmod.util.ModTags;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentType;
@@ -25,3 +25,4 @@ public class ModArmorMaterials {
         map.put(EquipmentType.BODY, 19);
     }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F, ModTags.Items.REPAIRS_NUGGET_ARMOR, NUGGET_KEY);
 }
+

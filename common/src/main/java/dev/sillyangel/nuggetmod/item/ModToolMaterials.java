@@ -1,6 +1,6 @@
-package dev.sillyangel.nuggetmod.fabric.item;
+package dev.sillyangel.nuggetmod.item;
 
-import dev.sillyangel.nuggetmod.fabric.util.ModTags;
+import dev.sillyangel.nuggetmod.util.ModTags;
 import net.minecraft.item.ToolMaterial;
 
 public class ModToolMaterials {
@@ -13,3 +13,4 @@ public class ModToolMaterials {
             ModTags.Items.NUGGET_TOOL_MATERIALS
     );
 }
+

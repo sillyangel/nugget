@@ -3,11 +3,11 @@ package dev.sillyangel.nuggetmod.fabric;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import dev.sillyangel.nuggetmod.fabric.datagen.*;
-import dev.sillyangel.nuggetmod.fabric.trim.ModTrimMaterials;
-import dev.sillyangel.nuggetmod.fabric.trim.ModTrimPatterns;
+import dev.sillyangel.nuggetmod.trim.ModTrimMaterials;
+import dev.sillyangel.nuggetmod.trim.ModTrimPatterns;
 import net.minecraft.registry.RegistryBuilder;
-import dev.sillyangel.nuggetmod.fabric.world.ModConfiguredFeatures;
-import dev.sillyangel.nuggetmod.fabric.world.ModPlacedFeatures;
+import dev.sillyangel.nuggetmod.worldgen.ModConfiguredFeatures;
+import dev.sillyangel.nuggetmod.worldgen.ModPlacedFeatures;
 import net.minecraft.registry.RegistryKeys;
 
 public class NuggetModDataGenerator implements DataGeneratorEntrypoint {

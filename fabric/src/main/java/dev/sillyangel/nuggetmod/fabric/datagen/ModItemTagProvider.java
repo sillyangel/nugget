@@ -2,7 +2,7 @@ package dev.sillyangel.nuggetmod.fabric.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import dev.sillyangel.nuggetmod.fabric.item.ModItems;
+import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -15,30 +15,25 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-//        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
-//                .add(ModItems.NUGGET)
-//                .add(ModItems.RAW_NUGGET)
-//                .add(Items.COAL)
-//                .add(Items.STICK)
-//                .add(Items.APPLE);
         valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.NUGGET_SWORD);
+                .add(ModItems.NUGGET_SWORD.get());
         valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.NUGGET_PICKAXE);
+                .add(ModItems.NUGGET_PICKAXE.get());
         valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.NUGGET_SHOVEL);
+                .add(ModItems.NUGGET_SHOVEL.get());
         valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.NUGGET_AXE);
+                .add(ModItems.NUGGET_AXE.get());
         valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.NUGGET_HOE);
+                .add(ModItems.NUGGET_HOE.get());
         valueLookupBuilder(ItemTags.SPEARS)
-                .add(ModItems.NUGGET_SPEAR);
+                .add(ModItems.NUGGET_SPEAR.get());
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.NUGGET_HELMET)
-                .add(ModItems.NUGGET_CHESTPLATE)
-                .add(ModItems.NUGGET_LEGGINGS)
-                .add(ModItems.NUGGET_BOOTS);
+                .add(ModItems.NUGGET_HELMET.get())
+                .add(ModItems.NUGGET_CHESTPLATE.get())
+                .add(ModItems.NUGGET_LEGGINGS.get())
+                .add(ModItems.NUGGET_BOOTS.get());
         valueLookupBuilder(ItemTags.TRIM_MATERIALS)
-                .add(ModItems.NUGGET);
+                .add(ModItems.NUGGET.get());
     }
 }
+

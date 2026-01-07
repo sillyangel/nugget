@@ -1,7 +1,7 @@
-package dev.sillyangel.nuggetmod.fabric.trim;
+package dev.sillyangel.nuggetmod.trim;
 
-import dev.sillyangel.nuggetmod.fabric.NuggetMod;
-import dev.sillyangel.nuggetmod.fabric.item.ModItems;
+import dev.sillyangel.nuggetmod.NuggetMod;
+import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.trim.ArmorTrimPattern;
 import net.minecraft.registry.Registerable;
@@ -16,7 +16,7 @@ public class ModTrimPatterns {
             Identifier.of(NuggetMod.MOD_ID, "nugget"));
 
     public static void bootstrap(Registerable<ArmorTrimPattern> context) {
-        register(context, ModItems.NUGGET_SMITHING_TEMPLATE, NUGGET);
+        register(context, ModItems.NUGGET_SMITHING_TEMPLATE.get(), NUGGET);
     }
 
     private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {

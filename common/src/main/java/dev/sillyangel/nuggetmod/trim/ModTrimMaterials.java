@@ -1,7 +1,7 @@
-package dev.sillyangel.nuggetmod.fabric.trim;
+package dev.sillyangel.nuggetmod.trim;
 
-import dev.sillyangel.nuggetmod.fabric.NuggetMod;
-import dev.sillyangel.nuggetmod.fabric.item.ModItems;
+import dev.sillyangel.nuggetmod.NuggetMod;
+import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.trim.ArmorTrimAssets;
 import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
@@ -22,7 +22,7 @@ public class ModTrimMaterials {
             Identifier.of(NuggetMod.MOD_ID, "nugget"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
-        register(registerable, NUGGET, Registries.ITEM.getEntry(ModItems.NUGGET),
+        register(registerable, NUGGET, Registries.ITEM.getEntry(ModItems.NUGGET.get()),
                 Style.EMPTY.withColor(TextColor.parse("#f9b042").getOrThrow()));
 
     }

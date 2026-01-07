@@ -1,4 +1,4 @@
-package dev.sillyangel.nuggetmod.fabric.world.gen;
+package dev.sillyangel.nuggetmod.fabric.world;
 
 public class ModWorldGeneration {
     public static void generateModWorldGen() {

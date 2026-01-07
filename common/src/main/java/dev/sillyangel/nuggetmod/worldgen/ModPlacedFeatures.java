@@ -1,6 +1,6 @@
-package dev.sillyangel.nuggetmod.fabric.world;
+package dev.sillyangel.nuggetmod.worldgen;
 
-import dev.sillyangel.nuggetmod.fabric.NuggetMod;
+import dev.sillyangel.nuggetmod.NuggetMod;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

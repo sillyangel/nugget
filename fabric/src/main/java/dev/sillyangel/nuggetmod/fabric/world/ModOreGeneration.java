@@ -1,8 +1,8 @@
-package dev.sillyangel.nuggetmod.fabric.world.gen;
+package dev.sillyangel.nuggetmod.fabric.world;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import dev.sillyangel.nuggetmod.fabric.world.ModPlacedFeatures;
+import dev.sillyangel.nuggetmod.worldgen.ModPlacedFeatures;
 import net.minecraft.world.gen.GenerationStep;
 
 public class ModOreGeneration {

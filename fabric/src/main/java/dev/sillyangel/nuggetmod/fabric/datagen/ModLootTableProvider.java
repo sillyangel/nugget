@@ -2,8 +2,8 @@ package dev.sillyangel.nuggetmod.fabric.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import dev.sillyangel.nuggetmod.fabric.block.ModBlocks;
-import dev.sillyangel.nuggetmod.fabric.item.ModItems;
+import dev.sillyangel.nuggetmod.block.ModBlocks;
+import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
@@ -26,11 +26,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.NUGGET_BLOCK);
-        addDrop(ModBlocks.RAW_NUGGET_BLOCK);
+        addDrop(ModBlocks.NUGGET_BLOCK.get());
+        addDrop(ModBlocks.RAW_NUGGET_BLOCK.get());
 
-        addDrop(ModBlocks.NUGGET_ORE, oreDrops(ModBlocks.NUGGET_ORE, ModItems.RAW_NUGGET));
-        addDrop(ModBlocks.NUGGET_DEEPSLATE_ORE, multipleOreDrops(ModBlocks.NUGGET_DEEPSLATE_ORE, ModItems.RAW_NUGGET, 2, 6));
+        addDrop(ModBlocks.NUGGET_ORE.get(), oreDrops(ModBlocks.NUGGET_ORE.get(), ModItems.RAW_NUGGET.get()));
+        addDrop(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), multipleOreDrops(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), ModItems.RAW_NUGGET.get(), 2, 6));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
@@ -40,3 +40,4 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
 }
+
