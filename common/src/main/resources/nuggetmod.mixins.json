@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "dev.sillyangel.nuggetmod.mixin",
+  "package": "dev.sillyangel.nuggetmod.fabric.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
