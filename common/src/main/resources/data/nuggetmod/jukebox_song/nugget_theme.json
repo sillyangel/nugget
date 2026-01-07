@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.nuggetmod.nugget_music_disc.desc"
+  },
+  "length_in_seconds": 36,
+  "sound_event": "nuggetmod:nugget_theme"
+}

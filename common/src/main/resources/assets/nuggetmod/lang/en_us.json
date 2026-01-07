@@ -1,0 +1,48 @@
+{
+  "item.nuggetmod.raw_nugget": "Raw Nugget",
+  "item.nuggetmod.nugget": "Nugget",
+
+  "block.nuggetmod.nugget_block": "Nugget Block",
+  "block.nuggetmod.raw_nugget_block": "Raw Nugget Block",
+  "block.nuggetmod.nugget_ore": "Nugget Ore",
+  "block.nuggetmod.nugget_deepslate_ore": "Nugget Deepslate Ore",
+
+  "item.nuggetmod.nugget_sword": "Nugget Sword",
+  "item.nuggetmod.nugget_pickaxe": "Nugget Pickaxe",
+  "item.nuggetmod.nugget_shovel": "Nugget Shovel",
+  "item.nuggetmod.nugget_axe": "Nugget Axe",
+  "item.nuggetmod.nugget_hoe": "Nugget Hoe",
+  "item.nuggetmod.nugget_bow": "Nugget Bow",
+  "item.nuggetmod.nugget_crossbow": "Nugget Crossbow",
+  "item.nuggetmod.nugget_trident": "Nugget Trident",
+  "item.nuggetmod.nugget_fishing_rod": "Nugget Fishing Rod",
+  "item.nuggetmod.nugget_flint_and_steel": "Nugget Flint and Steel",
+  "item.nuggetmod.nugget_shears": "Nugget Shears",
+  "item.nuggetmod.nugget_shield": "Nugget Shield",
+  "item.nuggetmod.nugget_spear": "Nugget Spear",
+
+  "item.nuggetmod.nugget_music_disc": "Nugget Theme",
+  "item.nuggetmod.nugget_music_disc.desc": "Gegagedigedagedago",
+
+
+  "item.nuggetmod.nugget_horse_armor": "Nugget Horse Armor",
+  "item.nuggetmod.nugget_armor_trim_smithing_template": "Smithing Template",
+
+  "item.nuggetmod.nugget_helmet": "Nugget Helmet",
+  "item.nuggetmod.nugget_chestplate": "Nugget Chestplate",
+  "item.nuggetmod.nugget_leggings": "Nugget Leggings",
+  "item.nuggetmod.nugget_boots": "Nugget Boots",
+
+  "creativetab.nuggetmod.nugget_items": "Nugget Items",
+  "creativetab.nuggetmod.nugget_blocks": "Nugget Blocks",
+
+  "item.nuggetmod.nugget.tooltip": "THE NUGGET",
+
+  "trim_material.nuggetmod.nugget": "Nugget Material",
+  "trim_pattern.nuggetmod.nugget_trim_material": "Nugget Trim",
+  "trim_pattern.nuggetmod.nugget_armor_trim_smithing_template": "§6Nugget Armor Trim",
+  "trim_pattern.nuggetmod.nugget": "Nugget Trim",
+
+  "painting.nuggetmod.nugget_painting.title": "Nugget Painting",
+  "painting.nuggetmod.nugget_painting.author": "Nugget Mod"
+}

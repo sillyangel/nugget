@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": "nuggetmod:nugget",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " NN",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "nuggetmod:nugget_hoe"
+  }
+}

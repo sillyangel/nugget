@@ -1,0 +1,10 @@
+{
+  "nugget_theme": {
+    "sounds": [
+        {
+            "name": "nuggetmod:nugget_theme",
+            "stream": true
+        }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "nuggetmod:block/raw_nugget_block"
+  }
+}

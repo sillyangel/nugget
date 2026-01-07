@@ -1,0 +1,38 @@
+{
+    "item.nuggetmod.raw_nugget": "Nugget Crudo",
+    "item.nuggetmod.nugget": "Nugget",
+
+    "block.nuggetmod.nugget_block": "Bloque de Nuggets",
+    "block.nuggetmod.raw_nugget_block": "Bloque de Nuggets Crudos",
+    "block.nuggetmod.nugget_ore": "Mineral de Nuggets",
+    "block.nuggetmod.nugget_deepslate_ore": "Mineral de Nuggets de Pizca Profunda",
+
+    "item.nuggetmod.nugget_sword": "Espada de Nuggets",
+    "item.nuggetmod.nugget_pickaxe": "Pico de Nuggets",
+    "item.nuggetmod.nugget_shovel": "Pala de Nuggets",
+    "item.nuggetmod.nugget_axe": "Hacha de Nuggets",
+    "item.nuggetmod.nugget_hoe": "Azada de Nuggets",
+
+    "item.nuggetmod.nugget_music_disc": "Tema de Nuggets",
+    "item.nuggetmod.nugget_music_disc.desc": "Gegagedigedagedago",
+
+    "item.nuggetmod.nugget_horse_armor": "Armadura de Caballo de Nuggets",
+    "item.nuggetmod.nugget_armor_trim_smithing_template": "Plantilla de Adorno de Nuggets",
+
+    "item.nuggetmod.nugget_helmet": "Casco de Nuggets",
+    "item.nuggetmod.nugget_chestplate": "Peto de Nuggets",
+    "item.nuggetmod.nugget_leggings": "Leotardos de Nuggets",
+    "item.nuggetmod.nugget_boots": "Botas de Nuggets",
+
+    "creativetab.nuggetmod.nugget_items": "Artículos de Nuggets",
+    "creativetab.nuggetmod.nugget_blocks": "Bloques de Nuggets",
+
+    "item.nuggetmod.nugget.tooltip": "EL NUGGET",
+
+    "trim_material.nuggetmod.nugget": "Material de Nuggets",
+    "trim_pattern.nuggetmod.nugget_trim_material": "Adorno de Nuggets",
+    "trim_pattern.nuggetmod.nugget": "Adorno de Nuggets",
+
+    "painting.nuggetmod.nugget_painting.title": "Pintura de Nuggets",
+    "painting.nuggetmod.nugget_painting.author": "Mod de Nuggets"
+}

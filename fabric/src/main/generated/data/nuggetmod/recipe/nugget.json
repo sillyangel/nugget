@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "nuggetmod:nugget_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "nuggetmod:nugget"
+  }
+}

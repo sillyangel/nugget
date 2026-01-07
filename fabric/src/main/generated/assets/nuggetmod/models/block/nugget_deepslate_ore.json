@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nuggetmod:block/nugget_deepslate_ore"
+  }
+}
