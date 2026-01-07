@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[10,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://git.sillyangel.dev/angel/nugget/issues"
+license = "MIT"
 
 [[mods]]
 modId = "nuggetmod"
 version = "${version}"
 displayName = "Nugget Mod"
-authors = "Me!"
+authors = "sillyangel"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''
@@ -16,21 +16,21 @@ This is an example description! Tell everyone what your mod is about!
 [[dependencies.nuggetmod]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.10,)"
+versionRange = "[21.11,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.nuggetmod]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.10,)"
+versionRange = "[1.21.11,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.nuggetmod]]
 modId = "architectury"
 type = "required"
-versionRange = "[18.0.6,)"
+versionRange = "[19.0.1,)"
 ordering = "AFTER"
 side = "BOTH"
 
