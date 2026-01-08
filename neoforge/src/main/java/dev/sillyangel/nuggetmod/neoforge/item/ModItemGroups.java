@@ -5,21 +5,20 @@ import dev.sillyangel.nuggetmod.block.ModBlocks;
 import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 public class ModItemGroups {
+    public static final DeferredRegister<ItemGroup> CREATIVE_MODE_TABS =
+            DeferredRegister.create(RegistryKeys.ITEM_GROUP, NuggetMod.MOD_ID);
 
-    public static final RegistryKey<ItemGroup> NUGGET_BLOCKS_GROUP_KEY = RegistryKey.of(RegistryKeys.ITEM_GROUP,
-            Identifier.of(NuggetMod.MOD_ID, "nugget_blocks"));
-
-    public static final ItemGroup NUGGET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            NUGGET_BLOCKS_GROUP_KEY,
-            ItemGroup.create(ItemGroup.Row.TOP, -1)
+    public static final Supplier<ItemGroup> NUGGET_BLOCKS_GROUP = CREATIVE_MODE_TABS.register("nugget_blocks",
+            () -> ItemGroup.create(ItemGroup.Row.TOP, -1)
                     .icon(() -> new ItemStack(ModBlocks.NUGGET_BLOCK.get()))
                     .displayName(Text.translatable("creativetab.nuggetmod.nugget_blocks"))
                     .entries((displayContext, entries) -> {
@@ -29,13 +28,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.NUGGET_DEEPSLATE_ORE.get());
                     }).build());
 
-    public static final RegistryKey<ItemGroup> NUGGET_ITEMS_GROUP_KEY = RegistryKey.of(RegistryKeys.ITEM_GROUP,
-            Identifier.of(NuggetMod.MOD_ID, "nugget_items"));
-
-    public static final ItemGroup NUGGET_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            NUGGET_ITEMS_GROUP_KEY,
-            ItemGroup.create(ItemGroup.Row.TOP, -1)
+    public static final Supplier<ItemGroup> NUGGET_ITEMS_GROUP = CREATIVE_MODE_TABS.register("nugget_items",
+            () -> ItemGroup.create(ItemGroup.Row.TOP, -1)
                     .icon(() -> new ItemStack(ModItems.NUGGET.get()))
+                    .withTabsBefore(Identifier.of(NuggetMod.MOD_ID, "nugget_blocks"))
                     .displayName(Text.translatable("creativetab.nuggetmod.nugget_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.NUGGET.get());
@@ -58,7 +54,8 @@ public class ModItemGroups {
                         entries.add(ModItems.NUGGET_MUSIC_DISC.get());
                     }).build());
 
-    public static void registerItemGroups() {
+    public static void registerItemGroups(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
     }
 }
 

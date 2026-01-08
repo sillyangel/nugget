@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "nuggetmod:nuggeter_poi",
+      "required": false
+    }
+  ]
+}

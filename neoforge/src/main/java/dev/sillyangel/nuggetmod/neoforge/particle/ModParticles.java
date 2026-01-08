@@ -1,20 +1,21 @@
 package dev.sillyangel.nuggetmod.neoforge.particle;
 
 import dev.sillyangel.nuggetmod.NuggetMod;
-import net.minecraft.particle.SimpleParticleType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.registry.RegistryKeys;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 public class ModParticles {
-    public static final SimpleParticleType NUGGET_PARTICLE =
-            registerParticle("nugget_particle", new SimpleParticleType(false));
+    public static final DeferredRegister<net.minecraft.particle.ParticleType<?>> PARTICLE_TYPES =
+            DeferredRegister.create(RegistryKeys.PARTICLE_TYPE, NuggetMod.MOD_ID);
 
-    private static SimpleParticleType registerParticle(String name, SimpleParticleType particleType) {
-        return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(NuggetMod.MOD_ID, name), particleType);
-    }
+    public static final Supplier<net.minecraft.particle.SimpleParticleType> NUGGET_PARTICLE =
+            PARTICLE_TYPES.register("nugget_particle", () -> new net.minecraft.particle.SimpleParticleType(false));
 
-    public static void registerParticles() {
+    public static void registerParticles(IEventBus eventBus) {
+        PARTICLE_TYPES.register(eventBus);
     }
 }
 

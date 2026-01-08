@@ -13,7 +13,7 @@ public class NuggetModClient {
 
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet(ModParticles.NUGGET_PARTICLE, NuggetParticle.Factory::new);
+        event.registerSpriteSet(ModParticles.NUGGET_PARTICLE.get(), NuggetParticle.Factory::new);
     }
 }
 

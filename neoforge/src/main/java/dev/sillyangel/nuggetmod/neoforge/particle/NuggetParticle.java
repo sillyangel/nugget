@@ -7,12 +7,13 @@ import net.minecraft.util.math.random.Random;
 import org.jetbrains.annotations.Nullable;
 
 public class NuggetParticle extends BillboardParticle {
-    public NuggetParticle(ClientWorld clientWorld, double x, double y, double z,
-                              SpriteProvider spriteProvider, double xSpeed, double ySpeed, double zSpeed) {
-        super(clientWorld, x, y, z, xSpeed, ySpeed, zSpeed, spriteProvider.getFirst());
+    protected NuggetParticle(ClientWorld level, double x, double y, double z, SpriteProvider spriteSet,
+                             double xSpeed, double ySpeed, double zSpeed) {
+        super(level, x, y, z, xSpeed, ySpeed, zSpeed, spriteSet.getSprite(Random.create()));
 
         this.velocityMultiplier = 0.8f;
-        this.maxAge = 40;
+        this.maxAge = 80;
+
         this.red = 1f;
         this.green = 1f;
         this.blue = 1f;
@@ -24,17 +25,17 @@ public class NuggetParticle extends BillboardParticle {
     }
 
     public static class Factory implements ParticleFactory<SimpleParticleType> {
-        private final SpriteProvider spriteProvider;
+        private final SpriteProvider spriteSet;
 
-        public Factory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
+        public Factory(SpriteProvider spriteSet) {
+            this.spriteSet = spriteSet;
         }
 
         @Nullable
         @Override
-        public Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z,
-                                       double velocityX, double velocityY, double velocityZ, Random random) {
-            return new NuggetParticle(world, x, y, z, this.spriteProvider, velocityX, velocityY, velocityZ);
+        public Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld clientLevel,
+                                       double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed, Random randomSource) {
+            return new NuggetParticle(clientLevel, pX, pY, pZ, this.spriteSet, pXSpeed, pYSpeed, pZSpeed);
         }
     }
 }

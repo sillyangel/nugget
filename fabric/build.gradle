@@ -57,5 +57,20 @@ remapJar {
 fabricApi {
     configureDataGeneration() {
         client = true
+        modId = project.archives_name
+        createSourceSet = false
+    }
+}
+
+loom {
+    runs {
+        datagen {
+            client()
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen.output-dir=${project(':common').file('src/main/generated')}"
+            vmArg "-Dfabric-api.datagen.modid=${project.archives_name}"
+
+            runDir "build/datagen"
+        }
     }
 }

@@ -9,9 +9,11 @@ version = "${version}"
 displayName = "Nugget Mod"
 authors = "sillyangel"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+A Minecraft mod that brings the meme of Gegagedigedagedago Nugget into the Minecraft.
 '''
-#logoFile = ""
+logoFile = "icon.png"
+modUrl="https://modrinth.com/mod/nuggetmod"
+displayURL="https://modrinth.com/mod/nuggetmod"
 
 [[dependencies.nuggetmod]]
 modId = "neoforge"

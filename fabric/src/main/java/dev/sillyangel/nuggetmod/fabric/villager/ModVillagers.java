@@ -1,6 +1,7 @@
 package dev.sillyangel.nuggetmod.fabric.villager;
 
 import com.google.common.collect.ImmutableSet;
+import dev.sillyangel.nuggetmod.block.ModBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import dev.sillyangel.nuggetmod.fabric.NuggetMod;
 import net.minecraft.block.Block;
@@ -15,7 +16,8 @@ import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.poi.PointOfInterestType;
 
 public class ModVillagers {
-    public static final RegistryKey<PointOfInterestType> NUGGETER_POI_KEY = registerPoiKey("kaupen_poi");
+    public static final RegistryKey<PointOfInterestType> NUGGETER_POI_KEY = registerPoiKey("nuggeter_poi");
+    public static final PointOfInterestType NUGGETER_POI = registerPOI("nuggeter_poi", ModBlocks.NUGGET_BLOCK.get());
 
     public static final RegistryKey<VillagerProfession> NUGGETER_KEY =
             RegistryKey.of(RegistryKeys.VILLAGER_PROFESSION, Identifier.of(NuggetMod.MOD_ID, "nuggeter"));
