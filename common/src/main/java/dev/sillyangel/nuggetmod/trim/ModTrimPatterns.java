@@ -1,28 +1,28 @@
 package dev.sillyangel.nuggetmod.trim;
 
+import net.minecraft.world.item.equipment.trim.TrimPattern;
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.item.ModItems;
-import net.minecraft.item.Item;
-import net.minecraft.item.equipment.trim.ArmorTrimPattern;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 
 public class ModTrimPatterns {
-    public static final RegistryKey<ArmorTrimPattern> NUGGET = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
-            Identifier.of(NuggetMod.MOD_ID, "nugget"));
+    private static final Identifier NUGGET_LOCATION = Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget");
 
-    public static void bootstrap(Registerable<ArmorTrimPattern> context) {
-        register(context, ModItems.NUGGET_SMITHING_TEMPLATE.get(), NUGGET);
+    public static final ResourceKey<TrimPattern> NUGGET = ResourceKey.create(Registries.TRIM_PATTERN, NUGGET_LOCATION);
+
+    public static void bootstrap(BootstrapContext<TrimPattern> context) {
+        register(context, ModItems.NUGGET_SMITHING_TEMPLATE.get(), NUGGET, NUGGET_LOCATION);
     }
 
-    private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {
-        ArmorTrimPattern trimPattern = new ArmorTrimPattern(key.getValue(),
-                Text.translatable(Util.createTranslationKey("trim_pattern", key.getValue())), false);
-
+    private static void register(BootstrapContext<TrimPattern> context, Item item, ResourceKey<TrimPattern> key, Identifier assetId) {
+        TrimPattern trimPattern = new TrimPattern(assetId,
+                Component.translatable(Util.makeDescriptionId("trim_pattern", assetId)), false);
         context.register(key, trimPattern);
     }
 }

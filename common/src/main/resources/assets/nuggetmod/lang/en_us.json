@@ -38,13 +38,13 @@
 
   "item.nuggetmod.nugget.tooltip": "THE NUGGET",
 
-  "entity.minecraft.villager.nuggeter": "Nuggeter",
-
   "trim_material.nuggetmod.nugget": "Nugget Material",
   "trim_pattern.nuggetmod.nugget_trim_material": "Nugget Trim",
   "trim_pattern.nuggetmod.nugget_armor_trim_smithing_template": "§6Nugget Armor Trim",
   "trim_pattern.nuggetmod.nugget": "Nugget Trim",
 
   "painting.nuggetmod.nugget_painting.title": "Nugget Painting",
-  "painting.nuggetmod.nugget_painting.author": "Nugget Mod"
+  "painting.nuggetmod.nugget_painting.author": "Nugget Mod",
+
+  "entity.nuggetmod.villager.nuggeter": "Nuggeter"
 }

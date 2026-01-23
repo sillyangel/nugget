@@ -4,14 +4,14 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.sound.ModSounds;
-import net.minecraft.item.*;
-import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, RegistryKeys.ITEM);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.ITEM);
 
     // Basic Items
     public static final RegistrySupplier<Item> NUGGET = ITEMS.register("nugget",
@@ -41,29 +41,29 @@ public class ModItems {
 
     // Armor
     public static final RegistrySupplier<Item> NUGGET_HELMET = ITEMS.register("nugget_helmet",
-            () -> new Item(createSettings("nugget_helmet").armor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            () -> new Item(createSettings("nugget_helmet").humanoidArmor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorType.HELMET)));
 
     public static final RegistrySupplier<Item> NUGGET_CHESTPLATE = ITEMS.register("nugget_chestplate",
-            () -> new Item(createSettings("nugget_chestplate").armor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+            () -> new Item(createSettings("nugget_chestplate").humanoidArmor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
 
     public static final RegistrySupplier<Item> NUGGET_LEGGINGS = ITEMS.register("nugget_leggings",
-            () -> new Item(createSettings("nugget_leggings").armor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+            () -> new Item(createSettings("nugget_leggings").humanoidArmor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
 
     public static final RegistrySupplier<Item> NUGGET_BOOTS = ITEMS.register("nugget_boots",
-            () -> new Item(createSettings("nugget_boots").armor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+            () -> new Item(createSettings("nugget_boots").humanoidArmor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static final RegistrySupplier<Item> NUGGET_HORSE_ARMOR = ITEMS.register("nugget_horse_armor",
             () -> new Item(createSettings("nugget_horse_armor").horseArmor(ModArmorMaterials.NUGGET_ARMOR_MATERIAL)));
 
     // Special Items
     public static final RegistrySupplier<Item> NUGGET_SMITHING_TEMPLATE = ITEMS.register("nugget_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.of(createSettings("nugget_armor_trim_smithing_template")));
+            () -> SmithingTemplateItem.createArmorTrimTemplate(createSettings("nugget_armor_trim_smithing_template").stacksTo(1)));
 
     public static final RegistrySupplier<Item> NUGGET_MUSIC_DISC = ITEMS.register("nugget_music_disc",
-            () -> new Item(createSettings("nugget_music_disc").jukeboxPlayable(ModSounds.NUGGET_THEME_KEY).maxCount(1)));
+            () -> new Item(createSettings("nugget_music_disc").jukeboxPlayable(ModSounds.NUGGET_THEME_KEY)));
 
-    private static Item.Settings createSettings(String name) {
-        return new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(NuggetMod.MOD_ID, name)));
+    private static Item.Properties createSettings(String name) {
+        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)));
     }
 
     public static void init() {
