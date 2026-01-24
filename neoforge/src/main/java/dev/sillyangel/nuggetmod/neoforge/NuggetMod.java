@@ -1,6 +1,6 @@
 package dev.sillyangel.nuggetmod.neoforge;
 
-import dev.sillyangel.nuggetmod.neoforge.item.ModItemGroups;
+//import dev.sillyangel.nuggetmod.neoforge.item.ModItemGroups;
 import dev.sillyangel.nuggetmod.neoforge.particle.ModParticles;
 import dev.sillyangel.nuggetmod.neoforge.villager.ModVillagers;
 import net.neoforged.bus.api.IEventBus;
@@ -15,6 +15,6 @@ public final class NuggetMod {
         // Register NeoForge-specific features
         ModParticles.registerParticles(modEventBus);
         ModVillagers.registerVillagers(modEventBus);
-        ModItemGroups.registerItemGroups(modEventBus);
+//        ModItemGroups.registerItemGroups(modEventBus);
     }
 }

@@ -1,6 +1,6 @@
 package dev.sillyangel.nuggetmod.fabric;
 
-import dev.sillyangel.nuggetmod.fabric.item.ModItemGroups;
+//import dev.sillyangel.nuggetmod.fabric.item.ModItemGroups;
 import dev.sillyangel.nuggetmod.fabric.particle.ModParticles;
 import dev.sillyangel.nuggetmod.fabric.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
@@ -33,7 +33,7 @@ public class NuggetMod implements ModInitializer {
 		dev.sillyangel.nuggetmod.NuggetMod.init();
 
 		// Fabric-specific registrations
-		ModItemGroups.registerItemGroups();
+//		ModItemGroups.registerItemGroups();
 		ModWorldGeneration.generateModWorldGen();
 
 		// IMPORTANT: Register villagers before trades
@@ -68,7 +68,7 @@ public class NuggetMod implements ModInitializer {
 
 		// Villager trades - Vanilla Farmer
 		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
-			factories.add((world,entity, random) -> new TradeOffer(
+			factories.add((world,entity, random) -> new MerchantOffer(
 					new ItemCost(Items.EMERALD, 3),
 					new ItemStack(ModItems.NUGGET.get(), 8), 7, 2, 0.04f));
 		});

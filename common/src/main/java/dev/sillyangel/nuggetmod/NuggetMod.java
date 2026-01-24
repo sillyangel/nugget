@@ -1,6 +1,7 @@
 package dev.sillyangel.nuggetmod;
 
 import dev.sillyangel.nuggetmod.block.ModBlocks;
+import dev.sillyangel.nuggetmod.item.ModItemGroups;
 import dev.sillyangel.nuggetmod.item.ModItems;
 import dev.sillyangel.nuggetmod.sound.ModSounds;
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ public final class NuggetMod {
         ModSounds.init();
         ModItems.init();
         ModBlocks.init();
+        ModItemGroups.init();
 
         LOGGER.info("Nugget Mod initialized");
     }
