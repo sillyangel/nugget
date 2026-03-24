@@ -50,6 +50,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModBlocks.RAW_NUGGET_BLOCK.get()), has(ModBlocks.RAW_NUGGET_BLOCK.get()))
                         .save(recipeExporter);
 
+                // cake is a lie
+                shaped(RecipeCategory.FOOD, ModItems.NUGGET_CAKE.get())
+                        .pattern("MMM")
+                        .pattern("SES")
+                        .pattern("WWW")
+                        .define('M', Items.NUGGET_BLOCK)
+                        .define('S', Items.SUGAR)
+                        .define('E', Items.RAW_NUGGET)
+                        .define('W', ModItems.NUGGET)
+                        .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get()))
+                        .save(output);
+
                 // TOOLS
                 shaped(RecipeCategory.COMBAT, ModItems.NUGGET_SWORD.get())
                         .pattern(" N ")
