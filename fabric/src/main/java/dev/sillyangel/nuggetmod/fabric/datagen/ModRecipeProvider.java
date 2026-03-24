@@ -55,7 +55,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("MMM")
                         .pattern("SES")
                         .pattern("WWW")
-                        .define('M', ModBlocks.NUGGET_BLOCK)
+                        .define('M', ModBlocks.NUGGET_BLOCK.get())
                         .define('S', Items.SUGAR)
                         .define('E', ModItems.RAW_NUGGET)
                         .define('W', ModItems.NUGGET)
