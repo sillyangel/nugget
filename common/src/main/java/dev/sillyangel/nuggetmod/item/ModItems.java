@@ -17,9 +17,6 @@ public class ModItems {
     public static final RegistrySupplier<Item> NUGGET = ITEMS.register("nugget",
             () -> new Item(createSettings("nugget").food(ModFoodComponents.NUGGET)));
 
-    public static final RegistrySupplier<Item> NUGGET_CAKE = ITEMS.register("nugget_cake", 
-            () -> new Item(createSettings("nugget_cake")));
-            
     public static final RegistrySupplier<Item> RAW_NUGGET = ITEMS.register("raw_nugget",
             () -> new Item(createSettings("raw_nugget")));
 

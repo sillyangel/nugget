@@ -52,6 +52,8 @@ public class ModItemGroups {
                         entries.accept(ModItems.NUGGET_HORSE_ARMOR.get());
                         entries.accept(ModItems.NUGGET_SMITHING_TEMPLATE.get());
                         entries.accept(ModItems.NUGGET_MUSIC_DISC.get());
+
+                        entries.accept(ModBlocks.NUGGET_CAKE.get());
                     }).build());
 
     public static void registerItemGroups(IEventBus eventBus) {

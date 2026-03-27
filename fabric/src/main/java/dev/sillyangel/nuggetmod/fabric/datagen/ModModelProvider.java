@@ -21,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialCube(ModBlocks.RAW_NUGGET_BLOCK.get());
         blockStateModelGenerator.createTrivialCube(ModBlocks.NUGGET_ORE.get());
         blockStateModelGenerator.createTrivialCube(ModBlocks.NUGGET_DEEPSLATE_ORE.get());
+//        blockStateModelGenerator.blockStateOutput.accept();
     }
     // Items are generated here
     @Override

@@ -51,14 +51,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(recipeExporter);
 
                 // cake is a lie
-                shaped(RecipeCategory.FOOD, ModItems.NUGGET_CAKE.get())
+                shaped(RecipeCategory.FOOD, ModBlocks.NUGGET_CAKE.get())
                         .pattern("MMM")
                         .pattern("SES")
                         .pattern("WWW")
                         .define('M', ModBlocks.NUGGET_BLOCK.get())
                         .define('S', Items.SUGAR)
-                        .define('E', ModItems.RAW_NUGGET)
-                        .define('W', ModItems.NUGGET)
+                        .define('E', ModItems.RAW_NUGGET.get())
+                        .define('W', ModItems.NUGGET.get())
                         .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get()))
                         .save(output);
 
