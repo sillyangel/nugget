@@ -1,8 +1,9 @@
 package dev.sillyangel.nuggetmod.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import dev.sillyangel.nuggetmod.block.entities.NuggetFurnaceEntity;
+import dev.architectury.event.events.common.InteractionEvent;
 import dev.sillyangel.nuggetmod.block.entities.ModBlockEntityTypes;
+import dev.sillyangel.nuggetmod.block.entities.NuggetFurnaceEntity;
 import dev.sillyangel.nuggetmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -11,6 +12,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -20,7 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class NuggetFurnace extends AbstractFurnaceBlock {
+public class NuggetFurnace extends AbstractFurnaceBlock implements InteractionEvent.RightClickBlock {
 
     public static final MapCodec<NuggetFurnace> CODEC = simpleCodec(NuggetFurnace::new);
 
@@ -31,13 +34,15 @@ public class NuggetFurnace extends AbstractFurnaceBlock {
 
     public NuggetFurnace(Properties properties) {
         super(properties);
+
+        InteractionEvent.RIGHT_CLICK_BLOCK.register(this);
     }
 
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof AbstractFurnaceBlockEntity) {
-            player.openMenu((MenuProvider) blockEntity);
+            player.openMenu((MenuProvider)blockEntity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
     }
@@ -45,6 +50,20 @@ public class NuggetFurnace extends AbstractFurnaceBlock {
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createFurnaceTicker(level, blockEntityType, ModBlockEntityTypes.NUGGET_FURNACE.get());
+    }
+
+    @Override
+    public InteractionResult click(Player player, InteractionHand interactionHand, BlockPos blockPos, Direction direction) {
+        if(player.level().getBlockEntity(blockPos) == null || !(player.level().getBlockEntity(blockPos) instanceof NuggetFurnaceEntity blockEntity)){
+            return InteractionResult.PASS;
+        }
+        if(player.isShiftKeyDown()){
+            return InteractionResult.PASS;
+        }
+
+        player.openMenu(blockEntity);
+
+        return InteractionResult.SUCCESS;
     }
 
     @Override

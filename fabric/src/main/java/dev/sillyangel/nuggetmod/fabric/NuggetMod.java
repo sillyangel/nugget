@@ -1,5 +1,6 @@
 package dev.sillyangel.nuggetmod.fabric;
 
+import dev.sillyangel.nuggetmod.fabric.blocks.entities.ModBlockEntityTypesFabric;
 import net.fabricmc.api.ModInitializer;
 import dev.sillyangel.nuggetmod.fabric.world.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class NuggetMod implements ModInitializer {
 		// Initialize common mod
 		dev.sillyangel.nuggetmod.NuggetMod.init();
 
+		ModBlockEntityTypesFabric.initBlockEntityTypes();
 		ModWorldGeneration.generateModWorldGen();
 	}
 }
