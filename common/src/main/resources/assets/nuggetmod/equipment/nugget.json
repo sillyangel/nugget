@@ -1,10 +1,5 @@
 {
   "layers": {
-    "wolf_body": [
-      {
-        "texture": "nuggetmod:nugget"
-      }
-    ],
     "horse_body": [
       {
         "texture": "nuggetmod:nugget"
@@ -15,7 +10,17 @@
         "texture": "nuggetmod:nugget"
       }
     ],
+    "humanoid_baby": [
+      {
+        "texture": "nuggetmod:nugget"
+      }
+    ],
     "humanoid_leggings": [
+      {
+        "texture": "nuggetmod:nugget"
+      }
+    ],
+    "nautilus_body": [
       {
         "texture": "nuggetmod:nugget"
       }

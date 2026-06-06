@@ -3,7 +3,7 @@ package dev.sillyangel.nuggetmod.block;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
-import net.minecraft.world.level.block.CakeBlock;
+import dev.sillyangel.nuggetmod.block.custom.NuggetCakeBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -22,7 +22,7 @@ public class ModBlocks {
     public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.ITEM);
 
     public static final RegistrySupplier<Block> NUGGET_CAKE = registerBlockWithItem("nugget_cake",
-            () -> new CakeBlock(createBlockSettings("nugget_cake")
+            () -> new NuggetCakeBlock(createBlockSettings("nugget_cake")
                     .strength(0.5f)
                     .forceSolidOn()
                     .sound(SoundType.WOOL)));
