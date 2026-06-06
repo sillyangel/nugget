@@ -46,6 +46,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.RAW_NUGGET.get()), has(ModItems.RAW_NUGGET.get()))
                         .save(recipeExporter);
 
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NUGGET_FURNACE.get())
+                        .pattern("RRR")
+                        .pattern("R R")
+                        .pattern("RRR")
+                        .define('R', ModItems.NUGGET.get())
+                        .unlockedBy(getHasName(ModItems.NUGGET.get()), has(ModItems.NUGGET.get()))
+                        .save(recipeExporter);
+
                 shapeless(RecipeCategory.MISC, ModItems.RAW_NUGGET.get(), 9)
                         .requires(ModBlocks.RAW_NUGGET_BLOCK.get())
                         .unlockedBy(getHasName(ModBlocks.RAW_NUGGET_BLOCK.get()), has(ModBlocks.RAW_NUGGET_BLOCK.get()))

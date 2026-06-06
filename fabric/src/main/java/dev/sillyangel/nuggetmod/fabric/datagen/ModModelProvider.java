@@ -8,6 +8,7 @@ import dev.sillyangel.nuggetmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TexturedModel;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
@@ -20,6 +21,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialCube(ModBlocks.RAW_NUGGET_BLOCK.get());
         blockStateModelGenerator.createTrivialCube(ModBlocks.NUGGET_ORE.get());
         blockStateModelGenerator.createTrivialCube(ModBlocks.NUGGET_DEEPSLATE_ORE.get());
+
+        blockStateModelGenerator.createFurnace(
+                ModBlocks.NUGGET_FURNACE.get(), TexturedModel.ORIENTABLE
+        );
 //        blockStateModelGenerator.blockStateOutput.accept();
     }
     // Items are generated here

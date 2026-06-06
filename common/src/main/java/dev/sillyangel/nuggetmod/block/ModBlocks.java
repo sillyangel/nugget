@@ -4,6 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.block.custom.NuggetCakeBlock;
+import dev.sillyangel.nuggetmod.block.custom.NuggetFurnace;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -14,6 +15,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.resources.Identifier;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import java.util.function.Supplier;
 
@@ -21,7 +23,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.BLOCK);
     public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.ITEM);
 
-    public static final RegistrySupplier<Block> NUGGET_CAKE = registerBlockWithItem("nugget_cake",
+    public static final RegistrySupplier<NuggetCakeBlock> NUGGET_CAKE = registerBlockWithItem("nugget_cake",
             () -> new NuggetCakeBlock(createBlockSettings("nugget_cake")
                     .strength(0.5f)
                     .forceSolidOn()
@@ -50,6 +52,9 @@ public class ModBlocks {
                             .strength(4f)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.DEEPSLATE)));
+
+    public static final RegistrySupplier<NuggetFurnace> NUGGET_FURNACE = registerBlockWithItem("nugget_furnace",
+            () -> new NuggetFurnace(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F).lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 13 : 0)));
 
     private static <T extends Block> RegistrySupplier<T> registerBlockWithItem(String name, Supplier<T> block) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);

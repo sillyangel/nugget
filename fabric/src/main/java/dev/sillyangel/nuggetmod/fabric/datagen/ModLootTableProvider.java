@@ -28,6 +28,7 @@ public class ModLootTableProvider extends FabricBlockLootSubProvider {
     public void generate() {
         dropSelf(ModBlocks.NUGGET_BLOCK.get());
         dropSelf(ModBlocks.RAW_NUGGET_BLOCK.get());
+        dropSelf(ModBlocks.NUGGET_FURNACE.get());
 
         add(ModBlocks.NUGGET_ORE.get(), createOreDrop(ModBlocks.NUGGET_ORE.get(), ModItems.RAW_NUGGET.get()));
         add(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), multipleOreDrops(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), ModItems.RAW_NUGGET.get(), 2, 6));
