@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:needs_diamond_tool",
+    "nuggetmod:nugget_furnace",
     "nuggetmod:nugget_block"
   ]
 }

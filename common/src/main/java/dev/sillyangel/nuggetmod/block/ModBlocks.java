@@ -53,9 +53,15 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.DEEPSLATE)));
 
-    public static final RegistrySupplier<NuggetFurnace> NUGGET_FURNACE = registerBlockWithItem("nugget_furnace",
-            () -> new NuggetFurnace(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.5F).lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 13 : 0)));
-
+    public static final RegistrySupplier<NuggetFurnace> NUGGET_FURNACE =
+            registerBlockWithItem("nugget_furnace",
+                    () -> new NuggetFurnace(
+                            createBlockSettings("nugget_furnace")
+                                    .requiresCorrectToolForDrops()
+                                    .strength(3.5F)
+                                    .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 13 : 0)
+                    )
+            );
     private static <T extends Block> RegistrySupplier<T> registerBlockWithItem(String name, Supplier<T> block) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
         BLOCK_ITEMS.register(name, () -> new BlockItem(toReturn.get(),
