@@ -46,5 +46,7 @@
   "painting.nuggetmod.nugget_painting.title": "Nugget Painting",
   "painting.nuggetmod.nugget_painting.author": "Nugget Mod",
 
-  "entity.nuggetmod.villager.nuggeter": "Nuggeter"
+  "entity.nuggetmod.villager.nuggeter": "Nuggeter",
+
+  "container.nuggetmod.nugget_furnace": "Nugget Furnace"
 }

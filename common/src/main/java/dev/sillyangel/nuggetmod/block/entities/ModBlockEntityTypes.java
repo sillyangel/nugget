@@ -6,7 +6,6 @@ import dev.sillyangel.nuggetmod.NuggetMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 
 import java.util.function.Supplier;
 
@@ -14,7 +13,7 @@ public class ModBlockEntityTypes {
 
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(NuggetMod.MOD_ID, Registries.BLOCK_ENTITY_TYPE);
 
-    public static RegistrySupplier<BlockEntityType<FurnaceBlockEntity>> NUGGET_FURNACE;
+    public static RegistrySupplier<BlockEntityType<NuggetFurnaceEntity>> NUGGET_FURNACE;
 
     public static void init(){
         BLOCK_ENTITIES.register();
