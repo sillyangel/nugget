@@ -21,7 +21,6 @@ public final class NuggetMod {
         ModSounds.init();
         ModItems.init();
         ModBlocks.init();
-        ModBlockEntityTypes.init();
         ModItemGroups.init();
         ModVillagers.init();
         ModParticles.init();
