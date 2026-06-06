@@ -1,6 +1,7 @@
 package dev.sillyangel.nuggetmod;
 
 import dev.sillyangel.nuggetmod.block.ModBlocks;
+import dev.sillyangel.nuggetmod.block.entities.ModBlockEntityTypes;
 import dev.sillyangel.nuggetmod.item.ModItemGroups;
 import dev.sillyangel.nuggetmod.item.ModItems;
 import dev.sillyangel.nuggetmod.particle.ModParticles;
@@ -20,6 +21,7 @@ public final class NuggetMod {
         ModSounds.init();
         ModItems.init();
         ModBlocks.init();
+        ModBlockEntityTypes.init();
         ModItemGroups.init();
         ModVillagers.init();
         ModParticles.init();

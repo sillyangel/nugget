@@ -1,6 +1,5 @@
 package dev.sillyangel.nuggetmod.block.entities;
 
-import dev.sillyangel.nuggetmod.block.entities.NuggetModBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class NuggetFurnaceEntity extends AbstractFurnaceBlockEntity {
 
     public NuggetFurnaceEntity(BlockPos pos, BlockState blockState) {
-        super(NuggetModBlockEntityTypes.NUGGET_FURNACE.get(), pos, blockState, RecipeType.SMELTING);
+        super(ModBlockEntityTypes.NUGGET_FURNACE.get(), pos, blockState, RecipeType.SMELTING);
     }
 
     @Override

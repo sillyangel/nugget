@@ -1,9 +1,9 @@
 {
   "textures": {
-    "particle": "block/cake_side",
-    "bottom": "block/cake_bottom",
-    "top": "block/cake_top",
-    "side": "block/cake_side"
+    "particle": "block/nugget_cake_side",
+    "bottom": "block/nugget_cake_bottom",
+    "top": "block/nugget_cake_top",
+    "side": "block/nugget_cake_side"
   },
   "elements": [
     {   "from": [ 1, 0, 1 ],

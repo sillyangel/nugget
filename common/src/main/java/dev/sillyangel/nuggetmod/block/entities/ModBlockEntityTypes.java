@@ -10,13 +10,13 @@ import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 
 import java.util.function.Supplier;
 
-public class NuggetModBlockEntityTypes {
+public class ModBlockEntityTypes {
 
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(NuggetMod.MOD_ID, Registries.BLOCK_ENTITY_TYPE);
 
     public static RegistrySupplier<BlockEntityType<FurnaceBlockEntity>> NUGGET_FURNACE;
 
-    public static void writeRegister(){
+    public static void init(){
         BLOCK_ENTITIES.register();
     }
 

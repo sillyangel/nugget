@@ -28,6 +28,7 @@ public class ModItemGroups {
                         entries.accept(ModBlocks.RAW_NUGGET_BLOCK.get());
                         entries.accept(ModBlocks.NUGGET_ORE.get());
                         entries.accept(ModBlocks.NUGGET_DEEPSLATE_ORE.get());
+                        entries.accept(ModBlocks.NUGGET_FURNACE.get());
                     }).build());
 
     public static final RegistrySupplier<CreativeModeTab> NUGGET_ITEMS_GROUP = CREATIVE_MODE_TABS.register("nugget_items",

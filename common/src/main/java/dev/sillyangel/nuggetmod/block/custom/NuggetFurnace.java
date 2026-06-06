@@ -2,7 +2,7 @@ package dev.sillyangel.nuggetmod.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import dev.sillyangel.nuggetmod.block.entities.NuggetFurnaceEntity;
-import dev.sillyangel.nuggetmod.block.entities.NuggetModBlockEntityTypes;
+import dev.sillyangel.nuggetmod.block.entities.ModBlockEntityTypes;
 import dev.sillyangel.nuggetmod.particle.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -44,7 +44,7 @@ public class NuggetFurnace extends AbstractFurnaceBlock {
 
     @Override
     public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
-        return createFurnaceTicker(level, blockEntityType, NuggetModBlockEntityTypes.NUGGET_FURNACE.get());
+        return createFurnaceTicker(level, blockEntityType, ModBlockEntityTypes.NUGGET_FURNACE.get());
     }
 
     @Override
