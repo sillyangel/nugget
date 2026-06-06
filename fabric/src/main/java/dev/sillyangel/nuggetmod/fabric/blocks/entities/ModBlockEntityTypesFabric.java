@@ -8,7 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 public class ModBlockEntityTypesFabric extends ModBlockEntityTypes {
 
     public static void initBlockEntityTypes(){
-        NUGGET_FURNACE = registerBlockEntity("ruby_furnace", () -> FabricBlockEntityTypeBuilder.create(NuggetFurnaceEntity::new, ModBlocks.NUGGET_FURNACE.get()).build());
+        NUGGET_FURNACE = registerBlockEntity("nugget_furnace", () -> FabricBlockEntityTypeBuilder.create(NuggetFurnaceEntity::new, ModBlocks.NUGGET_FURNACE.get()).build());
 
         init();
     }
