@@ -18,18 +18,9 @@ configurations {
 
     // Files in this configuration will be bundled into your mod using the Shadow plugin.
     // Don't use the `shadow` configuration from the plugin itself as it's meant for excluding files.
-    shadowCommon {
+    shadowBundle {
         canBeResolved = true
         canBeConsumed = false
-    }
-
-    apiElements {
-        outgoing.artifacts.clear()
-        outgoing.artifact(shadowJar)
-    }
-    runtimeElements {
-        outgoing.artifacts.clear()
-        outgoing.artifact(shadowJar)
     }
 }
 
@@ -44,10 +35,10 @@ dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
     // Architectury API. This is optional, and you can comment it out if you don't need it.
-    api "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
+    implementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
 
     common(project(path: ':common')) { transitive = false }
-    shadowCommon project(path: ':common', configuration: 'transformProductionNeoForge')
+    shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 }
 
 processResources {
@@ -59,13 +50,26 @@ processResources {
 }
 
 jar {
-    archiveClassifier = "raw"
+    archiveClassifier = 'raw'
 }
 
 shadowJar {
     dependsOn(jar)
+    mainSpec.sourcePaths.clear()
     from(zipTree(jar.archiveFile))
-    configurations = [project.configurations.shadowCommon]
+
+    configurations = [project.configurations.shadowBundle]
     archiveClassifier = null
-    from rootProject.file("LICENSE.md")
+    archiveBaseName = "nuggetmod-neoforge"
+}
+
+configurations {
+    apiElements {
+        outgoing.artifacts.clear()
+        outgoing.artifact(shadowJar)
+    }
+    runtimeElements {
+        outgoing.artifacts.clear()
+        outgoing.artifact(shadowJar)
+    }
 }

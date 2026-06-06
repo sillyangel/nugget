@@ -3,6 +3,7 @@ package dev.sillyangel.nuggetmod.item;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
+import dev.sillyangel.nuggetmod.item.custom.NuggetItem;
 import dev.sillyangel.nuggetmod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -15,7 +16,7 @@ public class ModItems {
 
     // Basic Items
     public static final RegistrySupplier<Item> NUGGET = ITEMS.register("nugget",
-            () -> new Item(createSettings("nugget").food(ModFoodComponents.NUGGET)));
+            () -> new NuggetItem(createSettings("nugget").food(ModFoodComponents.NUGGET)));
 
     public static final RegistrySupplier<Item> RAW_NUGGET = ITEMS.register("raw_nugget",
             () -> new Item(createSettings("raw_nugget")));

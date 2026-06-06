@@ -3,9 +3,11 @@ package dev.sillyangel.nuggetmod;
 import dev.sillyangel.nuggetmod.block.ModBlocks;
 import dev.sillyangel.nuggetmod.item.ModItemGroups;
 import dev.sillyangel.nuggetmod.item.ModItems;
+import dev.sillyangel.nuggetmod.particle.ModParticles;
 import dev.sillyangel.nuggetmod.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import dev.sillyangel.nuggetmod.villager.ModVillagers;
 
 public final class NuggetMod {
     public static final String MOD_ID = "nuggetmod";
@@ -19,6 +21,8 @@ public final class NuggetMod {
         ModItems.init();
         ModBlocks.init();
         ModItemGroups.init();
+        ModVillagers.init();
+        ModParticles.init();
 
         LOGGER.info("Nugget Mod initialized");
     }

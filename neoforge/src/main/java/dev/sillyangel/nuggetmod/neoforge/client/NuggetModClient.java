@@ -1,7 +1,7 @@
 package dev.sillyangel.nuggetmod.neoforge.client;
 
 import dev.sillyangel.nuggetmod.NuggetMod;
-import dev.sillyangel.nuggetmod.neoforge.particle.ModParticles;
+import dev.sillyangel.nuggetmod.particle.ModParticles;
 import dev.sillyangel.nuggetmod.particle.NuggetParticle;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;

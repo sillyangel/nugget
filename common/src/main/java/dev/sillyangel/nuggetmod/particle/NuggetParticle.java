@@ -8,6 +8,7 @@ import net.minecraft.client.particle.SpriteSet;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 public class NuggetParticle extends SingleQuadParticle {
     protected NuggetParticle(ClientLevel level, double x, double y, double z, SpriteSet spriteSet,
@@ -23,10 +24,9 @@ public class NuggetParticle extends SingleQuadParticle {
     }
 
     @Override
-    protected  Layer getLayer() {
+    protected @NonNull Layer getLayer() {
         return Layer.TRANSLUCENT;
     }
-
 
     public static class Factory implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet spriteSet;

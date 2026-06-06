@@ -7,8 +7,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'nuggetmod'
+rootProject.name = "nuggetmod"
 
-include 'common'
-include 'fabric'
-include 'neoforge'
+include("common", "fabric", "neoforge")

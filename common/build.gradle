@@ -1,11 +1,14 @@
+def generatedResources = file("src/generated/resources")
+
 architectury {
-    common rootProject.enabled_platforms.toString().split(',')
+    common rootProject.enabled_platforms.split(',')
 }
 
 sourceSets {
     main {
         resources {
-            srcDir 'src/main/generated'
+            srcDir generatedResources
+            exclude '.cache/**'
         }
     }
 }

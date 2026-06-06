@@ -1,6 +1,6 @@
 package dev.sillyangel.nuggetmod.fabric.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -12,6 +12,7 @@ import dev.sillyangel.nuggetmod.item.ModItems;
 import dev.sillyangel.nuggetmod.trim.ModTrimPatterns;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.resources.Identifier;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -31,8 +32,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 List<ItemLike> NUGGET_SMELTABLES = List.of(ModItems.RAW_NUGGET.get(), ModBlocks.NUGGET_ORE.get(),
                         ModBlocks.NUGGET_DEEPSLATE_ORE.get());
 
-                oreSmelting(NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
-                oreBlasting(NUGGET_SMELTABLES, RecipeCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");
+                oreSmelting(NUGGET_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NUGGET.get(), 0.25f, 200, "nugget");
+                oreBlasting(NUGGET_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NUGGET.get(), 0.25f, 100, "nugget");
 
                 nineBlockStorageRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.NUGGET.get(), RecipeCategory.DECORATIONS, ModBlocks.NUGGET_BLOCK.get());
 
