@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class NuggetFurnace extends AbstractFurnaceBlock implements InteractionEvent.RightClickBlock {
+public class NuggetFurnace extends AbstractFurnaceBlock {
 
     public static final MapCodec<NuggetFurnace> CODEC = simpleCodec(NuggetFurnace::new);
 
@@ -34,14 +34,12 @@ public class NuggetFurnace extends AbstractFurnaceBlock implements InteractionEv
 
     public NuggetFurnace(Properties properties) {
         super(properties);
-
-        InteractionEvent.RIGHT_CLICK_BLOCK.register(this);
     }
 
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof AbstractFurnaceBlockEntity) {
+        if (blockEntity instanceof NuggetFurnaceEntity) {
             player.openMenu((MenuProvider)blockEntity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
@@ -52,19 +50,7 @@ public class NuggetFurnace extends AbstractFurnaceBlock implements InteractionEv
         return createFurnaceTicker(level, blockEntityType, ModBlockEntityTypes.NUGGET_FURNACE.get());
     }
 
-    @Override
-    public InteractionResult click(Player player, InteractionHand interactionHand, BlockPos blockPos, Direction direction) {
-        if(player.level().getBlockEntity(blockPos) == null || !(player.level().getBlockEntity(blockPos) instanceof NuggetFurnaceEntity blockEntity)){
-            return InteractionResult.PASS;
-        }
-        if(player.isShiftKeyDown()){
-            return InteractionResult.PASS;
-        }
 
-        player.openMenu(blockEntity);
-
-        return InteractionResult.SUCCESS;
-    }
 
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

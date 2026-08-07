@@ -5,6 +5,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.item.custom.NuggetItem;
 import dev.sillyangel.nuggetmod.sound.ModSounds;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.resources.ResourceKey;
@@ -63,6 +64,10 @@ public class ModItems {
     public static final RegistrySupplier<Item> NUGGET_MUSIC_DISC = ITEMS.register("nugget_music_disc",
             () -> new Item(createSettings("nugget_music_disc").jukeboxPlayable(ModSounds.NUGGET_THEME_KEY).stacksTo(1)));
 
+
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
     private static Item.Properties createSettings(String name) {
         return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)));
     }

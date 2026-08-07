@@ -15,25 +15,25 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
-        valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.NUGGET_SWORD.get());
-        valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.NUGGET_PICKAXE.get());
-        valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.NUGGET_SHOVEL.get());
-        valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.NUGGET_AXE.get());
-        valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.NUGGET_HOE.get());
-        valueLookupBuilder(ItemTags.SPEARS)
-                .add(ModItems.NUGGET_SPEAR.get());
-        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.NUGGET_HELMET.get())
-                .add(ModItems.NUGGET_CHESTPLATE.get())
-                .add(ModItems.NUGGET_LEGGINGS.get())
-                .add(ModItems.NUGGET_BOOTS.get());
-        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
-                .add(ModItems.NUGGET.get());
+        tag(ItemTags.SWORDS)
+                .add(ModItems.getRK(ModItems.NUGGET_SWORD.get()));
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.getRK(ModItems.NUGGET_PICKAXE.get()));
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.getRK(ModItems.NUGGET_SHOVEL.get()));
+        tag(ItemTags.AXES)
+                .add(ModItems.getRK(ModItems.NUGGET_AXE.get()));
+        tag(ItemTags.HOES)
+                .add(ModItems.getRK(ModItems.NUGGET_HOE.get()));
+        tag(ItemTags.SPEARS)
+                .add(ModItems.getRK(ModItems.NUGGET_SPEAR.get()));
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.getRK(ModItems.NUGGET_HELMET.get()))
+                .add(ModItems.getRK(ModItems.NUGGET_CHESTPLATE.get()))
+                .add(ModItems.getRK(ModItems.NUGGET_LEGGINGS.get()))
+                .add(ModItems.getRK(ModItems.NUGGET_BOOTS.get()));
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.getRK(ModItems.NUGGET.get()));
     }
 }
 

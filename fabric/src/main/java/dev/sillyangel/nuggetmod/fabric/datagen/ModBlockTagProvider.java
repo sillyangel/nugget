@@ -16,27 +16,27 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.NUGGET_BLOCK.get())
-                .add(ModBlocks.NUGGET_FURNACE.get())
-                .add(ModBlocks.RAW_NUGGET_BLOCK.get())
-                .add(ModBlocks.NUGGET_ORE.get())
-                .add(ModBlocks.NUGGET_DEEPSLATE_ORE.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_BLOCK.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_FURNACE.get()))
+                .add(ModBlocks.getRK(ModBlocks.RAW_NUGGET_BLOCK.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_ORE.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_DEEPSLATE_ORE.get()));
 
-        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.NUGGET_DEEPSLATE_ORE.get())
-                .add(ModBlocks.NUGGET_FURNACE.get())
-                .add(ModBlocks.NUGGET_BLOCK.get())
-                .add(ModBlocks.RAW_NUGGET_BLOCK.get());
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_DEEPSLATE_ORE.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_FURNACE.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_BLOCK.get()))
+                .add(ModBlocks.getRK(ModBlocks.RAW_NUGGET_BLOCK.get()));
 
-        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.NUGGET_FURNACE.get())
-                .add(ModBlocks.NUGGET_BLOCK.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_FURNACE.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_BLOCK.get()));
 
-        valueLookupBuilder(ModTags.Blocks.NEEDS_NUGGET_TOOL)
+        tag(ModTags.Blocks.NEEDS_NUGGET_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.NUGGET_FURNACE.get())
-                .add(ModBlocks.NUGGET_BLOCK.get());
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_FURNACE.get()))
+                .add(ModBlocks.getRK(ModBlocks.NUGGET_BLOCK.get()));
     }
 }
 
