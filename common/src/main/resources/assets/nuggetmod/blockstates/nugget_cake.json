@@ -1,7 +1,7 @@
 {
   "variants": {
     "bites=0": {
-      "model": "nuggetmod:block/cake"
+      "model": "nuggetmod:block/nugget_cake"
     },
     "bites=1": {
       "model": "nuggetmod:block/nugget_cake_slice1"
