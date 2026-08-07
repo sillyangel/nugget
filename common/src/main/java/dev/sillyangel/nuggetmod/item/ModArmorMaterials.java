@@ -2,27 +2,30 @@ package dev.sillyangel.nuggetmod.item;
 
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.util.ModTags;
-import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.item.equipment.EquipmentAsset;
-import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.EnumMap;
 
 public class ModArmorMaterials {
-    static RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset"));
-    public static final RegistryKey<EquipmentAsset> NUGGET_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(NuggetMod.MOD_ID, "nugget"));
+    public static final ResourceKey<EquipmentAsset> NUGGET_EQUIPMENT_ASSET =
+            ResourceKey.create(ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset")),
+                    Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget"));
 
-    public static final ArmorMaterial NUGGET_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(EquipmentType.class), map -> {
-        map.put(EquipmentType.BOOTS, 3);
-        map.put(EquipmentType.LEGGINGS, 6);
-        map.put(EquipmentType.CHESTPLATE, 8);
-        map.put(EquipmentType.HELMET, 3);
-        map.put(EquipmentType.BODY, 19);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F, ModTags.Items.REPAIRS_NUGGET_ARMOR, NUGGET_KEY);
+    public static final ArmorMaterial NUGGET_ARMOR_MATERIAL = new ArmorMaterial(1200,
+            Util.make(new EnumMap<>(ArmorType.class),
+            attribute -> {
+                 attribute.put(ArmorType.BOOTS, 5);
+                attribute.put(ArmorType.LEGGINGS, 7);
+                attribute.put(ArmorType.CHESTPLATE, 9);
+                attribute.put(ArmorType.HELMET, 5);
+                attribute.put(ArmorType.BODY, 11);
+            }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE,
+            4f, 0.1f, ModTags.Items.REPAIRS_NUGGET_ARMOR, NUGGET_EQUIPMENT_ASSET);
 }
 

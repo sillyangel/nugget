@@ -1,43 +1,44 @@
 package dev.sillyangel.nuggetmod.fabric.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import dev.sillyangel.nuggetmod.block.ModBlocks;
 import dev.sillyangel.nuggetmod.item.ModItems;
-import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LeafEntry;
-import net.minecraft.loot.function.ApplyBonusLootFunction;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModLootTableProvider extends FabricBlockLootTableProvider {
-    public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class ModLootTableProvider extends FabricBlockLootSubProvider {
+    public ModLootTableProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.NUGGET_BLOCK.get());
-        addDrop(ModBlocks.RAW_NUGGET_BLOCK.get());
+        dropSelf(ModBlocks.NUGGET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_NUGGET_BLOCK.get());
+        dropSelf(ModBlocks.NUGGET_FURNACE.get());
 
-        addDrop(ModBlocks.NUGGET_ORE.get(), oreDrops(ModBlocks.NUGGET_ORE.get(), ModItems.RAW_NUGGET.get()));
-        addDrop(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), multipleOreDrops(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), ModItems.RAW_NUGGET.get(), 2, 6));
+        add(ModBlocks.NUGGET_ORE.get(), createOreDrop(ModBlocks.NUGGET_ORE.get(), ModItems.RAW_NUGGET.get()));
+        add(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), multipleOreDrops(ModBlocks.NUGGET_DEEPSLATE_ORE.get(), ModItems.RAW_NUGGET.get(), 2, 6));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-                ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+        HolderLookup.RegistryLookup<Enchantment> impl = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(drop, this.applyExplosionDecay(drop, ((LootPoolSingletonContainer.Builder<?>)
+                LootItem.lootTableItem(item).apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops))))
+                .apply(ApplyBonusCount.addOreBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
 }
 

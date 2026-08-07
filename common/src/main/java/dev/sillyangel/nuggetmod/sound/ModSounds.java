@@ -3,20 +3,20 @@ package dev.sillyangel.nuggetmod.sound;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
-import net.minecraft.block.jukebox.JukeboxSong;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.item.JukeboxSong;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.Identifier;
 
 public class ModSounds {
-    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(NuggetMod.MOD_ID, RegistryKeys.SOUND_EVENT);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.SOUND_EVENT);
 
     public static final RegistrySupplier<SoundEvent> NUGGET_THEME = SOUND_EVENTS.register("nugget_theme",
-            () -> SoundEvent.of(Identifier.of(NuggetMod.MOD_ID, "nugget_theme")));
+            () -> SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_theme")));
 
-    public static final RegistryKey<JukeboxSong> NUGGET_THEME_KEY =
-            RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(NuggetMod.MOD_ID, "nugget_theme"));
+    public static final ResourceKey<JukeboxSong> NUGGET_THEME_KEY =
+            ResourceKey.create(Registries.JUKEBOX_SONG, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget_theme"));
 
     public static void init() {
         SOUND_EVENTS.register();

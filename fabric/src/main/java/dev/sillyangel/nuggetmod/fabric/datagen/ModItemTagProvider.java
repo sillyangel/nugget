@@ -1,20 +1,20 @@
 package dev.sillyangel.nuggetmod.fabric.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import dev.sillyangel.nuggetmod.item.ModItems;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
+    public ModItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.NUGGET_SWORD.get());
         valueLookupBuilder(ItemTags.PICKAXES)

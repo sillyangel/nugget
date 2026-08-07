@@ -1,19 +1,19 @@
 package dev.sillyangel.nuggetmod.worldgen;
 
-import net.minecraft.world.gen.placementmodifier.*;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
 public class ModOrePlacement {
-    public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
-        return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
+    public static List<PlacementModifier> orePlacement(PlacementModifier pCountPlacement, PlacementModifier pHeightRange) {
+        return List.of(pCountPlacement, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
     }
 
-    public static List<PlacementModifier> modifiersWithCount(int count, PlacementModifier heightModifier) {
-        return modifiers(CountPlacementModifier.of(count), heightModifier);
+    public static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
+        return orePlacement(CountPlacement.of(pCount), pHeightRange);
     }
 
-    public static List<PlacementModifier> modifiersWithRarity(int chance, PlacementModifier heightModifier) {
-        return modifiers(RarityFilterPlacementModifier.of(chance), heightModifier);
+    public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
     }
 }

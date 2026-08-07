@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "nuggetmod:nugget"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "nuggetmod:nugget"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "nuggetmod:nugget"
+      }
+    ]
+  }
+}

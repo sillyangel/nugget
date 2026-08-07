@@ -1,7 +1,7 @@
 package dev.sillyangel.nuggetmod.item;
 
 import dev.sillyangel.nuggetmod.util.ModTags;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.world.item.ToolMaterial;
 
 public class ModToolMaterials {
     public static final ToolMaterial NUGGET = new ToolMaterial(

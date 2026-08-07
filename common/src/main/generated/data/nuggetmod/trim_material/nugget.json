@@ -3,5 +3,8 @@
   "description": {
     "color": "#F9B042",
     "translate": "trim_material.nuggetmod.nugget"
+  },
+  "override_armor_assets": {
+    "nuggetmod:nugget": "nugget"
   }
 }

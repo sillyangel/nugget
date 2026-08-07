@@ -34,5 +34,15 @@
     "trim_pattern.nuggetmod.nugget": "Adorno de Nuggets",
 
     "painting.nuggetmod.nugget_painting.title": "Pintura de Nuggets",
-    "painting.nuggetmod.nugget_painting.author": "Mod de Nuggets"
+    "painting.nuggetmod.nugget_painting.author": "Mod de Nuggets",
+    "item.nuggetmod.nugget_bow": "Arco de Nuggets",
+    "item.nuggetmod.nugget_crossbow": "Ballesta de Nuggets",
+    "item.nuggetmod.nugget_trident": "Tridente de Nuggets",
+    "item.nuggetmod.nugget_fishing_rod": "Caña de Pescar de Nuggets",
+    "item.nuggetmod.nugget_flint_and_steel": "Pedernal y Acero de Nuggets",
+    "item.nuggetmod.nugget_shears": "Tijeras de Nuggets",
+    "item.nuggetmod.nugget_shield": "Escudo de Nuggets",
+    "item.nuggetmod.nugget_spear": "Lanza de Nuggets",
+    "entity.nuggetmod.villager.nuggeter": "Nuggeter",
+    "trim_pattern.nuggetmod.nugget_armor_trim_smithing_template": "§6Adorno de Armadura de Nuggets",
 }

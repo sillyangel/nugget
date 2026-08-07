@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "nuggetmod:block/nugget_furnace_bottom",
+    "front": "nuggetmod:block/nugget_furnace_front_on",
+    "side": "nuggetmod:block/nugget_furnace_side",
+    "top": "nuggetmod:block/nugget_furnace_top"
+  }
+}

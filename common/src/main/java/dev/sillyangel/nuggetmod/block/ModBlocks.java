@@ -3,59 +3,77 @@ package dev.sillyangel.nuggetmod.block;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import dev.sillyangel.nuggetmod.block.custom.NuggetCakeBlock;
+import dev.sillyangel.nuggetmod.block.custom.NuggetFurnace;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(NuggetMod.MOD_ID, RegistryKeys.BLOCK);
-    public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, RegistryKeys.ITEM);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.BLOCK);
+    public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(NuggetMod.MOD_ID, Registries.ITEM);
+
+    public static final RegistrySupplier<NuggetCakeBlock> NUGGET_CAKE = registerBlockWithItem("nugget_cake",
+            () -> new NuggetCakeBlock(createBlockSettings("nugget_cake")
+                    .strength(0.5f)
+                    .forceSolidOn()
+                    .sound(SoundType.WOOL)));
 
     public static final RegistrySupplier<Block> NUGGET_BLOCK = registerBlockWithItem("nugget_block",
             () -> new Block(createBlockSettings("nugget_block")
                     .strength(4f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.AMETHYST)));
 
     public static final RegistrySupplier<Block> RAW_NUGGET_BLOCK = registerBlockWithItem("raw_nugget_block",
             () -> new Block(createBlockSettings("raw_nugget_block")
                     .strength(4f)
-                    .requiresTool()));
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistrySupplier<Block> NUGGET_ORE = registerBlockWithItem("nugget_ore",
-            () -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+            () -> new DropExperienceBlock(UniformInt.of(2, 5),
                     createBlockSettings("nugget_ore")
                             .strength(3f)
-                            .requiresTool()));
+                            .requiresCorrectToolForDrops()));
 
     public static final RegistrySupplier<Block> NUGGET_DEEPSLATE_ORE = registerBlockWithItem("nugget_deepslate_ore",
-            () -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),
                     createBlockSettings("nugget_deepslate_ore")
                             .strength(4f)
-                            .requiresTool()
-                            .sounds(BlockSoundGroup.DEEPSLATE)));
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.DEEPSLATE)));
 
+    public static final RegistrySupplier<NuggetFurnace> NUGGET_FURNACE =
+            registerBlockWithItem("nugget_furnace",
+                    () -> new NuggetFurnace(
+                            createBlockSettings("nugget_furnace")
+                                    .requiresCorrectToolForDrops()
+                                    .strength(3.5F)
+                                    .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 13 : 0)
+                    )
+            );
     private static <T extends Block> RegistrySupplier<T> registerBlockWithItem(String name, Supplier<T> block) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
         BLOCK_ITEMS.register(name, () -> new BlockItem(toReturn.get(),
-                new Item.Settings()
-                        .useBlockPrefixedTranslationKey()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(NuggetMod.MOD_ID, name)))));
+                new Item.Properties()
+                        .useBlockDescriptionPrefix()
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)))));
         return toReturn;
     }
 
-    private static AbstractBlock.Settings createBlockSettings(String name) {
-        return AbstractBlock.Settings.create()
-                .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(NuggetMod.MOD_ID, name)));
+    private static BlockBehaviour.Properties createBlockSettings(String name) {
+        return BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)));
     }
 
     public static void init() {

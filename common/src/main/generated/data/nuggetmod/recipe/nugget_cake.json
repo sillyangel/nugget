@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "nuggetmod:raw_nugget",
+    "M": "nuggetmod:nugget_block",
+    "S": "minecraft:sugar",
+    "W": "nuggetmod:nugget"
+  },
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "result": {
+    "id": "nuggetmod:nugget_cake"
+  }
+}
