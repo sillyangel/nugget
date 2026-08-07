@@ -5,6 +5,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import dev.sillyangel.nuggetmod.NuggetMod;
 import dev.sillyangel.nuggetmod.block.custom.NuggetCakeBlock;
 import dev.sillyangel.nuggetmod.block.custom.NuggetFurnace;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -69,6 +70,10 @@ public class ModBlocks {
                         .useBlockDescriptionPrefix()
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)))));
         return toReturn;
+    }
+
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }
 
     private static BlockBehaviour.Properties createBlockSettings(String name) {
