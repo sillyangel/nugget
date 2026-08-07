@@ -1,10 +1,10 @@
 {
   "textures": {
-    "particle": "block/nugget_cake_side",
-    "bottom": "block/nugget_cake_bottom",
-    "top": "block/nugget_cake_top",
-    "side": "block/nugget_cake_side",
-    "inside": "block/nugget_cake_inner"
+    "particle": "nuggetmod:block/nugget_cake_side",
+    "bottom": "nuggetmod:block/nugget_cake_bottom",
+    "top": "nuggetmod:block/nugget_cake_top",
+    "side": "nuggetmod:block/nugget_cake_side",
+    "inside": "nuggetmod:block/nugget_cake_inner"
   },
   "elements": [
     {   "from": [ 11, 0, 1 ],
