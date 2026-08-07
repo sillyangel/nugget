@@ -61,7 +61,7 @@ public class ModItems {
             () -> SmithingTemplateItem.createArmorTrimTemplate(createSettings("nugget_armor_trim_smithing_template").stacksTo(1)));
 
     public static final RegistrySupplier<Item> NUGGET_MUSIC_DISC = ITEMS.register("nugget_music_disc",
-            () -> new Item(createSettings("nugget_music_disc").jukeboxPlayable(ModSounds.NUGGET_THEME_KEY)));
+            () -> new Item(createSettings("nugget_music_disc").jukeboxPlayable(ModSounds.NUGGET_THEME_KEY).stacksTo(1)));
 
     private static Item.Properties createSettings(String name) {
         return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, name)));
