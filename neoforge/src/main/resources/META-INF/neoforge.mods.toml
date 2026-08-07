@@ -1,4 +1,4 @@
-mofordLoader = "javafml"
+modLoader = "javafml"
 loaderVersion = "[10,)"
 issueTrackerURL = "https://git.sillyangel.dev/angel/nugget/issues"
 license = "MIT"
