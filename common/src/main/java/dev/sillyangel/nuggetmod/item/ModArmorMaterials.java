@@ -17,9 +17,10 @@ public class ModArmorMaterials {
             ResourceKey.create(ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset")),
                     Identifier.fromNamespaceAndPath(NuggetMod.MOD_ID, "nugget"));
 
-    public static final ArmorMaterial NUGGET_ARMOR_MATERIAL = new ArmorMaterial(1200, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial NUGGET_ARMOR_MATERIAL = new ArmorMaterial(1200,
+            Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
-                attribute.put(ArmorType.BOOTS, 5);
+                 attribute.put(ArmorType.BOOTS, 5);
                 attribute.put(ArmorType.LEGGINGS, 7);
                 attribute.put(ArmorType.CHESTPLATE, 9);
                 attribute.put(ArmorType.HELMET, 5);

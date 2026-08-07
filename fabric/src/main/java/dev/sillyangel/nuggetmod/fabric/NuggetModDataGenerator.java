@@ -21,6 +21,7 @@ public class NuggetModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
+        pack.addProvider(ModEquipmentAssetProvider::new);
     }
     @Override
     public void buildRegistry(RegistrySetBuilder registryBuilder) {
